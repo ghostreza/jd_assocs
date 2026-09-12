@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+<style>
+.bg{fill:#07161D}.panel{fill:#1B2D3A;stroke:#22384A;stroke-width:1}.grid{stroke:#22384A;stroke-width:.5;stroke-dasharray:4 4}.deep{fill:none;stroke:#1B2D3A;stroke-width:1.5}.mid{fill:none;stroke:#22384A;stroke-width:1.5}.shallow{fill:none;stroke:#8EA0AD;stroke-width:1;stroke-dasharray:6 2}.gold{stroke:#C19A58;fill:none;stroke-width:1.5}.soft{stroke:#D7B77F;fill:none;stroke-width:1}.txt{fill:#E8EDF2;font-family:monospace;font-size:9px;letter-spacing:1px}.muted{fill:#8EA0AD;font-family:monospace;font-size:7px}.vessel{fill:none;stroke:#E8EDF2;stroke-width:1.5;stroke-linejoin:round}.water{stroke:#C19A58;stroke-width:1;stroke-dasharray:2 2}
+</style>
+<rect width="400" height="400" class="bg"/><rect x="15" y="15" width="370" height="370" class="panel" rx="2"/>
+<path d="M50 20V380M125 20V380M200 20V380M275 20V380M350 20V380M20 50H380M20 125H380M20 200H380M20 275H380M20 350H380" class="grid"/>
+<path d="M20 220Q90 200 160 230T300 210T380 240M20 260Q100 230 180 270T320 250T380 280M20 310Q110 280 200 310T310 290T380 330M20 350Q80 330 150 360T280 340T380 360" class="deep"/>
+<path d="M20 260Q100 230 180 270T320 250T380 280" class="mid"/><path d="M20 310Q110 280 200 310T310 290T380 330" class="shallow"/>
+<text x="325" y="245" class="muted">-050M</text><text x="325" y="285" class="muted">-120M</text><text x="325" y="325" class="muted">-240M</text>
+<g transform="translate(60 100)"><path d="M10 60H40L60 48H180L220 55H260L275 68H10Z" class="vessel"/><path d="M80 48L95 30H150L170 48M110 30L115 18H135L140 30" class="vessel"/><path d="M125 18V5M118 10H132" class="vessel"/><line x1="0" y1="68" x2="285" y2="68" class="water"/></g>
+<circle cx="185" cy="148" r="4" fill="#C19A58"/><circle cx="185" cy="148" r="18" class="gold" stroke-dasharray="4 2"/><path d="M185 120V176M157 148H213" class="soft"/>
+<path d="M25 40V25H40M375 40V25H360M25 360V375H40M375 360V375H360" class="gold"/>
+<text x="30" y="42" class="txt">SYS.MAR-NAV // SPEC_01</text><text x="30" y="52" class="muted">BATHYMETRY: ACTIVE | SONAR: 40kHz</text><text x="270" y="42" class="txt">LAT: 08°41'22&quot;S</text><text x="270" y="52" class="txt">LON: 115°13'02&quot;E</text>
+<path d="M30 355H130M30 352V358M80 353V357M130 352V358" class="gold"/><text x="30" y="348" class="muted">0</text><text x="75" y="348" class="muted">500M</text><text x="120" y="348" class="muted">1KM</text>
+</svg>

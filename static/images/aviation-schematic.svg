@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+<style>
+.bg{fill:#07161D}.grid{stroke:#1B2D3A;stroke-width:1}.wire{fill:none;stroke:#E8EDF2;stroke-width:1.2;stroke-linejoin:round}.sub{fill:none;stroke:#8EA0AD;stroke-width:.8;stroke-dasharray:3 3}.gold{fill:none;stroke:#C19A58;stroke-width:1.5}.soft{fill:none;stroke:#D7B77F;stroke-width:1}.hud{stroke:#22384A;stroke-width:1;stroke-dasharray:2 4}.txt{fill:#E8EDF2;font-family:monospace;font-size:9px;letter-spacing:1px}.goldtxt{fill:#C19A58;font-family:monospace;font-size:8px}.muted{fill:#8EA0AD;font-family:monospace;font-size:7px}
+</style>
+<rect width="400" height="400" class="bg"/><circle cx="200" cy="200" r="160" class="hud"/><circle cx="200" cy="200" r="100" class="hud"/><path d="M200 20V380M20 200H380" class="grid"/>
+<g transform="translate(200 200)"><path d="M0-120L8-70V-30L75 30V55L12 40V90L35 110V120L0 112L-35 120V110L-12 90V40L-75 55V30L-8-30V-70Z" class="wire"/><path d="M0-120V112M-8-30H8M-12 40H12" class="sub"/><ellipse cy="-45" rx="5" ry="18" class="wire"/></g>
+<g class="gold"><path d="M120 130H150V138M280 130H250V138M100 200H140M140 195V205M300 200H260M260 195V205M120 270H135M142 270H150V262M280 270H265M258 270H250V262" stroke-dasharray="4 2"/></g>
+<path d="M80 80A170 170 0 0 1 320 80M130 50A160 160 0 0 1 270 50" class="soft" stroke-dasharray="6 3"/><circle cx="200" cy="200" r="6" class="gold"/><path d="M200 188V191M200 209V212M188 200H191M209 200H212M30 50V30H50M370 50V30H350M30 350V370H50M370 350V370H350" class="soft"/>
+<text x="35" y="45" class="txt">AERO-SPEC // FTR-21</text><text x="35" y="360" class="goldtxt">ALT: 28,400 FT</text><text x="35" y="370" class="goldtxt">SPD: MACH 1.42</text><text x="300" y="360" class="txt">PITCH: +02.5°</text><text x="300" y="370" class="txt">ROLL: 00.0°</text><text x="105" y="133" class="muted">+10</text><text x="105" y="273" class="muted">-10</text>
+</svg>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{ seo.description }}">
+    <meta name="keywords" content="{{ seo.keywords }}">
+    <meta name="author" content="J&D Associates">
+    <meta property="og:title" content="{{ title or seo.title }}">
+    <meta property="og:description" content="{{ seo.description }}">
+    <meta property="og:type" content="website">
+    <title>{{ title or seo.title }}</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    
+    <!-- JSON-LD Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "J&D Associates",
+      "url": "https://www.jdassociates.com",
+      "logo": "https://www.jdassociates.com/static/images/logo.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+62-877-7538-2824",
+        "contactType": "customer service"
+      }
+    }
+    </script>
+</head>
+<body>
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="logo-container">
+                <a href="/" class="logo-link">
+                    <!-- Inline SVG Logo Approximation -->
+                    <svg width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <polygon points="50,5 95,27.5 95,72.5 50,95 5,72.5 5,27.5" fill="#0A2540" stroke="#C9A227" stroke-width="2"/>
+                        <path d="M20,60 Q40,30 60,60 T90,50" fill="none" stroke="#1F4E79" stroke-width="4"/>
+                        <path d="M50,70 Q70,50 85,30" fill="none" stroke="#C9A227" stroke-width="3"/>
+                    </svg>
+                    <span class="logo-text">J&D ASSOCIATES</span>
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/marine">Marine</a></li>
+                <li><a href="/aviation">Aviation</a></li>
+                <li><a href="/electro-optics">Electro-Optics</a></li>
+                <li><a href="/contact" class="btn-gold">Contact Us</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="content-wrapper">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-col">
+                <h3>J&D Associates</h3>
+                <p>Your trusted partner in securing borders, protecting national assets, and exploring the ocean depths.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="/marine">Marine</a></li>
+                    <li><a href="/aviation">Aviation</a></li>
+                    <li><a href="/electro-optics">Electro-Optics</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contact</h3>
+                <p>Email: JD.associates800@gmail.com</p>
+                <p>WA: +62 877-7538-2824</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 J&D Associates. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

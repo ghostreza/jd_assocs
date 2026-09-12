@@ -1,0 +1,170 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="site-intro" id="siteIntro" aria-live="polite">
+    <div class="intro-grid"></div>
+    <div class="intro-content">
+        <div class="intro-kicker">J&amp;D ASSOCIATES</div>
+        <p class="intro-quote">“When failure is simply not an option, precision becomes your ultimate strategic advantage.”</p>
+        <div class="intro-line"></div>
+    </div>
+</div>
+
+<!-- 1. HERO SECTION -->
+<section class="hero tactical-panel">
+    <div class="hero-scan" aria-hidden="true"></div>
+    <div class="hero-content fade-in-up">
+        <div class="hero-tag">Defense Systems / Maritime / Electro-Optics</div>
+        <h1>Precision for missions that cannot fail.</h1>
+        <p class="hero-subtitle">From the crushing depths of the ocean to the most unforgiving darkness of night, we deliver the measurable tactical advantage your operations demand.</p>
+        <div class="hero-buttons">
+            <a href="/marine" class="btn-primary">Explore Marine Systems</a>
+            <a href="/electro-optics" class="btn-secondary">View Electro-Optics</a>
+        </div>
+    </div>
+</section>
+
+<!-- 2. MISSION BRIEF (ABOUT US) -->
+<section class="mission-brief section-padding">
+    <div class="container grid-2">
+        <div class="mission-text fade-in-up">
+            <div class="section-label">WHO WE ARE</div>
+            <h2 class="section-title" style="text-align: left; margin-bottom: 1.5rem;">Your Strategic Partner in Extreme Environments</h2>
+            <p>J&D Associates is a premier strategic partner delivering world-class defense, security, and maritime exploration technologies. We understand that in defense, law enforcement, and maritime operations, failure is simply not an option.</p>
+            <p>Backed by precision engineering and rigorous Military Specification (MIL-SPEC) standards, we don't just supply equipment—we build lasting trust through unwavering reliability, rugged durability, and comprehensive technical support.</p>
+            <a href="/contact" class="btn-text">Partner With Us &rarr;</a>
+        </div>
+        <div class="mission-visual fade-in-up" style="transition-delay: 0.2s;">
+            <div class="stat-box">
+                <div class="stat-number">3</div>
+                <div class="stat-label">Domains of Excellence</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">50m</div>
+                <div class="stat-label">Max Operational Depth</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">Gen-3</div>
+                <div class="stat-label">Image Intensifier Tech</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 3. CORE DIVISIONS -->
+<section class="divisions section-padding bg-navy">
+    <div class="container">
+        <div class="section-header fade-in-up">
+            <div class="section-label">OUR CAPABILITIES</div>
+            <h2 class="section-title">Three Pillars of Operational Superiority</h2>
+        </div>
+        <div class="grid-3">
+            <a href="/marine" class="division-card fade-in-up">
+                <div class="div-icon"><img src="{{ url_for('static', filename='images/marine-schematic.svg') }}" alt="Marine navigation and bathymetric schematic"></div>
+                <h3>Marine</h3>
+                <p>High-performance Sea Chariots, submersibles, and specialized naval vessels for commercial and military depth operations.</p>
+                <span class="card-link">View Vessels &rarr;</span>
+            </a>
+            <a href="/aviation" class="division-card fade-in-up" style="transition-delay: 0.2s;">
+                <div class="div-icon"><img src="{{ url_for('static', filename='images/aviation-schematic.svg') }}" alt="Aircraft HUD and flight schematic"></div>
+                <h3>Aviation</h3>
+                <p>Premium aircraft and critical spare parts, ensuring airworthiness and operational readiness for your fleet.</p>
+                <span class="card-link">View Aircraft &rarr;</span>
+            </a>
+            <a href="/electro-optics" class="division-card fade-in-up" style="transition-delay: 0.4s;">
+                <div class="div-icon"><img src="{{ url_for('static', filename='images/electro-optics-schematic.svg') }}" alt="Electro-optics thermal targeting reticle schematic"></div>
+                <h3>Electro-Optics</h3>
+                <p>Advanced Gen-2/3 Night Vision systems and underwater lighting for total dominance in zero-light environments.</p>
+                <span class="card-link">View Optics &rarr;</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- 4. OPERATIONAL CAPABILITIES (FORMAT PENJELASAN TERSTRUKTUR) -->
+<section class="capabilities section-padding">
+    <div class="container">
+        <div class="section-header fade-in-up">
+            <div class="section-label">TECHNOLOGY SPOTLIGHT</div>
+            <h2 class="section-title">Engineered for the Unforgiving Dark</h2>
+        </div>
+        
+        <!-- Format Penjelasan: Split Layout dengan Spesifikasi -->
+        <div class="capability-row fade-in-up">
+            <div class="cap-visual">
+                <div class="cap-badge">FEATURED SYSTEM</div>
+                <h3>Night Watcher M25</h3>
+                <p class="cap-desc">A low-cost, high-performance Night Vision System incorporating a 95mm Catadioptic Objective Lens and 2nd/3rd Generation Image Intensifier.</p>
+            </div>
+            <div class="cap-specs">
+                <div class="spec-item">
+                    <div class="spec-title">Optical Range</div>
+                    <div class="spec-value">335m (Starlight)</div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-title">Magnification</div>
+                    <div class="spec-value">x3.8</div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-title">Operational Duration</div>
+                    <div class="spec-value">30 Hours</div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-title">Environment</div>
+                    <div class="spec-value">Commercial / Law Enforcement</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="capability-row reverse fade-in-up">
+            <div class="cap-visual">
+                <div class="cap-badge">FEATURED SYSTEM</div>
+                <h3>Sea Chariot Mk3</h3>
+                <p class="cap-desc">A highly maneuverable military submersible designed for reconnaissance, carrying three operators with a top surface speed of 35 knots.</p>
+            </div>
+            <div class="cap-specs">
+                <div class="spec-item">
+                    <div class="spec-title">Surface Speed</div>
+                    <div class="spec-value">35 Knots</div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-title">Underwater Duration</div>
+                    <div class="spec-value">4 Hours</div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-title">Propulsion</div>
+                    <div class="spec-value">Water Jet / 260hp Diesel</div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-title">Environment</div>
+                    <div class="spec-value">MIL-SPEC / Military</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 5. TRUST & STANDARDS -->
+<section class="trust-banner section-padding bg-steel">
+    <div class="container text-center fade-in-up">
+        <h2>MIL-SPEC Reliability. Uncompromising Performance.</h2>
+        <p>Every system we deploy has passed stringent testing protocols. Modular, customizable, and built to transcend conventional operational limits.</p>
+        <div class="trust-badges">
+            <div class="badge">MIL-SPEC Certified</div>
+            <div class="badge">Gen-3 Intensifiers</div>
+            <div class="badge">50m Depth Rated</div>
+            <div class="badge">Global Support</div>
+        </div>
+    </div>
+</section>
+
+<!-- 6. CALL TO ACTION -->
+<section class="cta-section section-padding">
+    <div class="container text-center fade-in-up">
+        <h2>Secure Your Strategic Advantage</h2>
+        <p>Discover the definitive solution for your critical operations. Contact our team today.</p>
+        <a href="/contact" class="btn-primary">Initiate Contact</a>
+    </div>
+</section>
+
+{% endblock %}

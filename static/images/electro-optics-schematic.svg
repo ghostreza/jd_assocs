@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+<style>
+.bg{fill:#07161D}.edge{fill:none;stroke:#22384A;stroke-width:1}.main{fill:none;stroke:#E8EDF2;stroke-width:1.2}.gold{fill:none;stroke:#C19A58;stroke-width:1.5}.soft{fill:none;stroke:#D7B77F;stroke-width:1}.grid{stroke:#1B2D3A;stroke-width:.8;stroke-dasharray:2 2}.dot{fill:#E8EDF2}.white{fill:#E8EDF2;font-family:monospace;font-size:8px;letter-spacing:1px}.goldtxt{fill:#C19A58;font-family:monospace;font-size:8px;letter-spacing:1px}.muted{fill:#8EA0AD;font-family:monospace;font-size:7px}
+</style>
+<rect width="400" height="400" class="bg"/><rect x="25" y="25" width="350" height="350" class="edge" rx="6"/><path d="M200 35V365M35 200H365" class="grid"/>
+<path d="M200 100V170M200 230V300M100 200H170M230 200H300" class="main"/><g class="dot"><circle cx="200" cy="120" r="1.5"/><circle cx="200" cy="140" r="1.5"/><circle cx="200" cy="160" r="1.5"/><circle cx="200" cy="240" r="1.5"/><circle cx="200" cy="260" r="1.5"/><circle cx="200" cy="280" r="1.5"/><circle cx="120" cy="200" r="1.5"/><circle cx="140" cy="200" r="1.5"/><circle cx="160" cy="200" r="1.5"/><circle cx="240" cy="200" r="1.5"/><circle cx="260" cy="200" r="1.5"/><circle cx="280" cy="200" r="1.5"/></g>
+<circle cx="200" cy="200" r="16" class="soft" stroke-dasharray="6 3"/><circle cx="200" cy="200" r="2" class="dot"/><path d="M175 180H170V185M225 180H230V185M170 215V220H175M230 215V220H225M35 55V35H55M365 55V35H345M35 345V365H55M365 345V365H345" class="gold"/>
+<path d="M160 35V40M180 35V40M200 32V43M220 35V40M240 35V40M365 160H360M365 180H360M368 200H357M365 220H360M365 240H360" class="soft"/>
+<text x="45" y="50" class="goldtxt">EO/IR // THERMAL-WHOT</text><text x="45" y="62" class="muted">GAIN: AUTO | MAG: x8.0</text><text x="45" y="340" class="white">RNG: 1,420 M</text><text x="45" y="352" class="goldtxt">TRG LOCK: ACQUIRED</text><text x="285" y="50" class="white">FOV: 3.2° x 2.4°</text><text x="285" y="62" class="muted">SENSOR: UNCOOLED</text><text x="290" y="340" class="white">AZ: 142.5°</text><text x="290" y="352" class="white">EL: -03.1°</text>
+</svg>
