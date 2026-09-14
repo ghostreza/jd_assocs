@@ -29,6 +29,28 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 
+    const slideshow = document.querySelector('[data-product-slideshow]');
+    if (slideshow) {
+        const slides = [...slideshow.querySelectorAll('.hero-product-slide')];
+        const counter = slideshow.querySelector('.hero-product-counter');
+        const progress = slideshow.querySelector('.hero-product-progress i');
+        let activeIndex = 0;
+
+        const showSlide = (index) => {
+            slides.forEach((slide, slideIndex) => slide.classList.toggle('is-active', slideIndex === index));
+            if (counter) counter.textContent = `${String(index + 1).padStart(2, '0')} / ${String(slides.length).padStart(2, '0')}`;
+            if (progress) progress.style.transform = `scaleX(${(index + 1) / slides.length})`;
+        };
+
+        if (slides.length > 1) {
+            showSlide(activeIndex);
+            window.setInterval(() => {
+                activeIndex = (activeIndex + 1) % slides.length;
+                showSlide(activeIndex);
+            }, 4800);
+        }
+    }
+
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
 

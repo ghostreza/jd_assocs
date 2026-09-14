@@ -1,0 +1,124 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!-- 1. ELECTRO-OPTICS HERO SECTION (Dengan Animasi Night Vision Grid) -->
+<section class="hero optics-hero">
+    <div class="optics-bg" aria-hidden="true">
+        <div class="nv-grid"></div>
+        <div class="scan-line"></div>
+        <div class="nv-corner tl"></div><div class="nv-corner tr"></div>
+        <div class="nv-corner bl"></div><div class="nv-corner br"></div>
+    </div>
+
+    <div class="hero-content fade-in-up">
+        <div class="hero-tag decrypt-text" data-text="ELECTRO-OPTICS / NIGHT VISION / THERMAL" aria-label="Electro-Optics Night Vision Thermal">
+            ELECTRO-OPTICS / NIGHT VISION / THERMAL
+        </div>
+        <h1 class="decrypt-text" data-text="Dominating the Unforgiving Dark." aria-label="Dominating the Unforgiving Dark.">
+            Dominating the Unforgiving Dark.
+        </h1>
+        <p>Total situational awareness when the lights go out. Featuring advanced Gen-2 and Gen-3 image intensifiers and microbolometer thermal sensors for absolute tactical superiority.</p>
+        <div class="hero-buttons">
+            <a href="#above-water" class="btn-primary">View Tactical Systems</a>
+            <a href="#underwater" class="btn-secondary">View Underwater Optics</a>
+        </div>
+    </div>
+</section>
+
+<!-- 2. ELECTRO-OPTICS PRODUCT CATALOG -->
+<section id="above-water" class="products section-padding container optics-catalog">
+    <div class="section-header fade-in-up">
+        <div class="section-label">ABOVE-WATER & TACTICAL</div>
+        <h2 class="section-title">Advanced Observation Systems</h2>
+    </div>
+
+    <article class="product-card tactical-panel fade-in-up">
+        <div class="product-image"><img src="{{ url_for('static', filename='images/NightWatcher25_1.jpg') }}" alt="Night Watcher M25 night vision system"></div>
+        <div class="product-details"><h2>NIGHT WATCHER M25</h2><p class="subtitle">Night Vision Observation System</p><p>A low-cost, high-performance system with a 95mm Catadioptic Objective Lens and 2nd/3rd Generation Image Intensifier for law enforcement, border control, and anti-drug operations.</p><ul class="specs"><li><strong>Objective:</strong> 95mm F/1.2 Catadioptic | <strong>FOV:</strong> 14.5 degrees</li><li><strong>Magnification:</strong> x3.8 | <strong>Range:</strong> 335m (Starlight)</li><li><strong>Duration:</strong> Approx. 30 hours</li></ul><a href="/contact" class="btn-gold">Request Quote</a></div>
+    </article>
+
+    <article class="product-card tactical-panel fade-in-up reverse">
+        <div class="product-image"><img src="{{ url_for('static', filename='images/NightWatcher25_2.jpg') }}" alt="Night Seeker thermal observation system"></div>
+        <div class="product-details"><h2>NIGHT SEEKER Mod-45135T</h2><p class="subtitle">Thermal Imaging Observation System</p><p>A rugged day and night observation system for short to medium distances, with an uncooled 8 to 14 micron microbolometer detector.</p><ul class="specs"><li><strong>Detector:</strong> 25µm Microbolometer | <strong>Lens:</strong> 45 to 135mm Germanium</li><li><strong>Detection Range:</strong> 2,489m | <strong>Recognition:</strong> 829m</li><li><strong>Environment:</strong> MIL-SPEC (-20°C to +60°C)</li></ul><a href="/contact" class="btn-gold">Request Quote</a></div>
+    </article>
+
+    <div id="underwater" class="section-header fade-in-up electro-subsection">
+        <div class="section-label">UNDERWATER & SPECIAL FORCES</div>
+        <h2 class="section-title">Frogman & Special Operations Optics</h2>
+    </div>
+
+    <article class="product-card tactical-panel fade-in-up">
+        <div class="product-image"><img src="{{ url_for('static', filename='images/nightdiver_1.jpg') }}" alt="Night Diver underwater night vision goggles"></div>
+        <div class="product-details"><h2>NIGHT DIVER (Model-DN)</h2><p class="subtitle">Underwater Night Vision Goggles</p><p>Superior underwater night vision goggles mounted on an Interspiro fullface mask for observation above and below water.</p><ul class="specs"><li><strong>Operational Depth:</strong> 50 meters | <strong>Range:</strong> 150m (Starlight)</li><li><strong>Field of View:</strong> 40 degrees | <strong>Duration:</strong> Approx. 40 hours</li><li><strong>Environment:</strong> MIL-SPEC</li></ul><a href="/contact" class="btn-gold">Request Quote</a></div>
+    </article>
+
+    <article class="product-card tactical-panel fade-in-up reverse">
+        <div class="product-image"><img src="{{ url_for('static', filename='images/nightshark_1.jpg') }}" alt="Night Shark handheld night vision system"></div>
+        <div class="product-details"><h2>NIGHT SHARK</h2><p class="subtitle">Waterproof Handheld NV System</p><p>Compact, waterproof, high-performance handheld night vision system for Frogmen and Special Forces.</p><ul class="specs"><li><strong>Operational Depth:</strong> 50 meters | <strong>Range:</strong> 600m (Optimum Starlight)</li><li><strong>Weight:</strong> 0.76 Kg in air | <strong>Duration:</strong> Approx. 40 hours</li><li><strong>Environment:</strong> MIL-SPEC</li></ul><a href="/contact" class="btn-gold">Request Quote</a></div>
+    </article>
+
+    <article class="product-card tactical-panel fade-in-up">
+        <div class="product-image"><img src="{{ url_for('static', filename='images/nightsentry.jpg') }}" alt="Night Sentry Mk2 monocular night vision system"></div>
+        <div class="product-details"><h2>NIGHT SENTRY Mk2</h2><p class="subtitle">Modular Night Vision Monocular</p><p>Lightweight, modular monocular night vision system with independent eye use and weapons-mount compatibility.</p><ul class="specs"><li><strong>Operational Depth:</strong> 50 meters | <strong>Range:</strong> 150m (Starlight)</li><li><strong>Weight:</strong> 460g without harness | <strong>Duration:</strong> Approx. 40 hours</li><li><strong>Mounting:</strong> Elcan Weapons Mount compatible</li></ul><a href="/contact" class="btn-gold">Request Quote</a></div>
+    </article>
+</section>
+
+<!-- CSS KHUSUS ELECTRO-OPTICS -->
+<style>
+    .optics-hero {
+        position: relative; height: 85vh; min-height: 600px; display: flex; align-items: center; justify-content: center;
+        background: #05101a; overflow: hidden;
+    }
+    .nv-grid {
+        position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+        background-image: linear-gradient(rgba(31, 78, 121, 0.2) 1px, transparent 1px), linear-gradient(90deg, rgba(31, 78, 121, 0.2) 1px, transparent 1px);
+        background-size: 40px 40px; z-index: 1;
+    }
+    .scan-line {
+        position: absolute; top: 0; left: 0; width: 100%; height: 5px;
+        background: linear-gradient(90deg, transparent, rgba(201, 162, 39, 0.4), transparent);
+        box-shadow: 0 0 15px rgba(201, 162, 39, 0.6);
+        animation: scan 4s linear infinite; z-index: 2;
+    }
+    @keyframes scan { 0% { top: -10%; } 100% { top: 110%; } }
+    .nv-corner { position: absolute; width: 30px; height: 30px; border: 2px solid rgba(201, 162, 39, 0.5); z-index: 2; }
+    .tl { top: 10%; left: 10%; border-right: none; border-bottom: none; }
+    .tr { top: 10%; right: 10%; border-left: none; border-bottom: none; }
+    .bl { bottom: 10%; left: 10%; border-right: none; border-top: none; }
+    .br { bottom: 10%; right: 10%; border-left: none; border-top: none; }
+
+    .product-split { display: flex; background: var(--color-white); border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin-bottom: 3rem; }
+    .product-split.reverse { flex-direction: row-reverse; }
+    .product-visual { flex: 1; padding: 3rem; background: var(--color-navy); color: var(--color-white); }
+    .product-badge { background: var(--color-gold); color: var(--color-navy); display: inline-block; padding: 4px 12px; border-radius: 4px; font-size: 0.75rem; font-weight: 700; margin-bottom: 1rem; }
+    .optional-extras { margin-top: 1.5rem; font-size: 0.9rem; color: #d1d9e0; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 1rem; }
+    .product-specs { flex: 1; padding: 3rem; display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+    .spec-group h4 { color: var(--color-steel); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1rem; border-bottom: 1px solid var(--color-gray); padding-bottom: 0.5rem; }
+    .spec-group ul { list-style: none; padding: 0; }
+    .spec-group li { margin-bottom: 0.8rem; font-size: 0.95rem; color: var(--color-navy); }
+    
+    .card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
+    .card-header h3 { color: var(--color-navy); margin: 0; font-size: 1.2rem; }
+    .tag { background: var(--color-steel); color: var(--color-white); padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: 700; }
+    .mini-specs { list-style: none; padding: 0; margin-top: 1.5rem; border-top: 1px solid var(--color-gray); padding-top: 1rem; }
+    .mini-specs li { font-size: 0.9rem; margin-bottom: 0.5rem; color: var(--color-navy); }
+
+    .optics-catalog { background: linear-gradient(180deg, #0c202c 0%, #091923 100%); max-width: none; }
+    .optics-catalog > .section-header,
+    .optics-catalog > .product-card,
+    .optics-catalog > .electro-subsection { max-width: 1400px; margin-left: auto; margin-right: auto; }
+    .optics-catalog .section-title { color: #f1f5f7; text-shadow: 0 2px 18px rgba(0, 0, 0, 0.35); margin-bottom: 2.5rem; }
+    .optics-catalog .section-label { color: var(--color-gold-soft); }
+    .electro-subsection { margin-top: 5rem; padding-top: 4rem; border-top: 1px solid rgba(215, 183, 127, 0.28); }
+    .electro-subsection .section-title { color: #f1f5f7; }
+    .optics-catalog .product-image { min-height: 430px; background: #07151e; }
+    .optics-catalog .product-image img { object-fit: contain; padding: 1.25rem; filter: contrast(1.06) saturate(1.04); }
+    .optics-catalog .product-details h2 { color: #f1f5f7; }
+
+    @media (max-width: 900px) {
+        .product-split, .product-split.reverse { flex-direction: column; }
+        .product-specs { grid-template-columns: 1fr; }
+    }
+</style>
+
+{% endblock %}

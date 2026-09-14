@@ -11,7 +11,7 @@
 </div>
 
 <!-- 1. HERO SECTION -->
-<section class="hero tactical-panel">
+<section class="hero home-hero tactical-panel">
     <div class="hero-scan" aria-hidden="true"></div>
     <div class="hero-content fade-in-up">
         <div class="hero-tag">Defense Systems / Maritime / Electro-Optics</div>
@@ -20,6 +20,40 @@
         <div class="hero-buttons">
             <a href="/marine" class="btn-primary">Explore Marine Systems</a>
             <a href="/electro-optics" class="btn-secondary">View Electro-Optics</a>
+        </div>
+    </div>
+    <div class="hero-product-showcase" data-product-slideshow aria-label="Featured products">
+        <div class="hero-product-slide is-active">
+            <img src="{{ url_for('static', filename='images/seachariot_1.jpg') }}" alt="Sea Chariot L380 underwater vehicle">
+            <div class="hero-product-caption"><span>MARINE</span><strong>Sea Chariot L380</strong></div>
+        </div>
+        <div class="hero-product-slide">
+            <img src="{{ url_for('static', filename='images/seachariotmk3_1.jpg') }}" alt="Sea Chariot Mk3 reconnaissance submersible">
+            <div class="hero-product-caption"><span>MARINE</span><strong>Sea Chariot Mk3</strong></div>
+        </div>
+        <div class="hero-product-slide">
+            <img src="{{ url_for('static', filename='images/mvquicksilverVI_1.jpg') }}" alt="MV Quicksilver VI catamaran">
+            <div class="hero-product-caption"><span>MARINE</span><strong>MV Quicksilver VI</strong></div>
+        </div>
+        <div class="hero-product-slide">
+            <img src="{{ url_for('static', filename='images/NightWatcher25_1.jpg') }}" alt="Night Watcher M25 night vision system">
+            <div class="hero-product-caption"><span>ELECTRO-OPTICS</span><strong>Night Watcher M25</strong></div>
+        </div>
+        <div class="hero-product-slide">
+            <img src="{{ url_for('static', filename='images/nightdiver_1.jpg') }}" alt="Night Diver underwater night vision goggles">
+            <div class="hero-product-caption"><span>ELECTRO-OPTICS</span><strong>Night Diver</strong></div>
+        </div>
+        <div class="hero-product-slide">
+            <img src="{{ url_for('static', filename='images/nightshark_1.jpg') }}" alt="Night Shark handheld night vision system">
+            <div class="hero-product-caption"><span>ELECTRO-OPTICS</span><strong>Night Shark</strong></div>
+        </div>
+        <div class="hero-product-slide">
+            <img src="{{ url_for('static', filename='images/nightsentry.jpg') }}" alt="Night Sentry Mk2 monocular night vision system">
+            <div class="hero-product-caption"><span>ELECTRO-OPTICS</span><strong>Night Sentry Mk2</strong></div>
+        </div>
+        <div class="hero-product-controls" aria-hidden="true">
+            <span class="hero-product-counter">01 / 07</span>
+            <span class="hero-product-progress"><i></i></span>
         </div>
     </div>
 </section>
@@ -146,7 +180,7 @@
 
 <!-- 5. TRUST & STANDARDS -->
 <section class="trust-banner section-padding bg-steel">
-    <div class="container text-center fade-in-up">
+    <div class="container trust-content text-center fade-in-up">
         <h2>MIL-SPEC Reliability. Uncompromising Performance.</h2>
         <p>Every system we deploy has passed stringent testing protocols. Modular, customizable, and built to transcend conventional operational limits.</p>
         <div class="trust-badges">
@@ -160,7 +194,7 @@
 
 <!-- 6. CALL TO ACTION -->
 <section class="cta-section section-padding">
-    <div class="container text-center fade-in-up">
+    <div class="container cta-content text-center fade-in-up">
         <h2>Secure Your Strategic Advantage</h2>
         <p>Discover the definitive solution for your critical operations. Contact our team today.</p>
         <a href="/contact" class="btn-primary">Initiate Contact</a>

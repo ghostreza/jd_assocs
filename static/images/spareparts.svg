@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%" style="background-color: #07161D;">
+  <title>Certified MIL-SPEC Spare Parts</title>
+
+  <!-- Corner Brackets -->
+  <path d="M 20 40 V 20 H 40" fill="none" stroke="#8EA0AD" stroke-width="1.5"/>
+  <path d="M 360 20 H 380 V 40" fill="none" stroke="#8EA0AD" stroke-width="1.5"/>
+  <path d="M 20 360 V 380 H 40" fill="none" stroke="#8EA0AD" stroke-width="1.5"/>
+  <path d="M 360 380 H 380 V 360" fill="none" stroke="#8EA0AD" stroke-width="1.5"/>
+
+  <!-- Technical Circles & Dimension Rings -->
+  <circle cx="200" cy="190" r="130" fill="none" stroke="#1B2D3A" stroke-width="1"/>
+  <circle cx="200" cy="190" r="105" fill="none" stroke="#8EA0AD" stroke-width="1" stroke-dasharray="4 4"/>
+  <circle cx="200" cy="190" r="45" fill="none" stroke="#C19A58" stroke-width="1.5"/>
+
+  <!-- Mechanical Gear / Component Blueprint -->
+  <g transform="translate(200, 190)">
+    <!-- Gear Teeth Outer Line -->
+    <path d="M -15 -85 H 15 L 20 -65 L 35 -60 L 52 -73 L 73 -52 L 60 -35 L 65 -20 L 85 -15 V 15 L 65 20 L 60 35 L 73 52 L 52 73 L 35 60 L 20 65 L 15 85 H -15 L -20 65 L -35 60 L -52 73 L -73 52 L -60 35 L -65 20 L -85 15 V -15 L -65 -20 L -60 -35 L -73 -52 L -52 -73 L -35 -60 L -20 -65 Z" fill="#0D1F2A" stroke="#E8EDF2" stroke-width="1.5" stroke-linejoin="round"/>
+    
+    <!-- Inner Axle Hub -->
+    <circle cx="0" cy="0" r="25" fill="none" stroke="#E8EDF2" stroke-width="1.5"/>
+    <path d="M -8 0 H 8 M 0 -8 V 8" stroke="#D7B77F" stroke-width="1.5"/>
+
+    <!-- Crosshair Ticks -->
+    <line x1="-100" y1="0" x2="-85" y2="0" stroke="#8EA0AD" stroke-width="1"/>
+    <line x1="85" y1="0" x2="100" y2="0" stroke="#8EA0AD" stroke-width="1"/>
+    <line x1="0" y1="-100" x2="0" y2="-85" stroke="#8EA0AD" stroke-width="1"/>
+    <line x1="0" y1="85" x2="0" y2="100" stroke="#8EA0AD" stroke-width="1"/>
+  </g>
+
+  <!-- Inspection Bracket & Stamp Target -->
+  <path d="M 90 80 H 70 V 100" fill="none" stroke="#D7B77F" stroke-width="1.5"/>
+  <path d="M 310 80 H 330 V 100" fill="none" stroke="#D7B77F" stroke-width="1.5"/>
+
+  <!-- Telemetry Text Overlay -->
+  <text x="30" y="40" fill="#C19A58" font-family="monospace" font-size="11" font-weight="bold">MIL-SPEC SPARE PARTS</text>
+  <text x="30" y="55" fill="#8EA0AD" font-family="monospace" font-size="8">TRACEABLE &amp; OEM CERTIFIED</text>
+  
+  <text x="30" y="365" fill="#E8EDF2" font-family="monospace" font-size="9">QC: PASSED // ISO-9001</text>
+  <text x="370" y="365" fill="#D7B77F" font-family="monospace" font-size="9" text-anchor="end">AIRWORTHY</text>
+</svg>

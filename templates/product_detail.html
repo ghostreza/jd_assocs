@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!-- Breadcrumb Navigation (Penting untuk UX) -->
+<div class="container" style="padding: 2rem 5%; font-size: 0.9rem; color: var(--color-gray);">
+    <a href="/" style="color: var(--color-steel);">Home</a> &gt; 
+    <a href="/{{ product.category|lower|replace(' ', '-') }}" style="color: var(--color-steel);">{{ product.category }}</a> &gt; 
+    <span style="color: var(--color-navy); font-weight: 600;">{{ product.name }}</span>
+</div>
+
+<!-- Product Hero -->
+<section class="product-hero">
+    <div class="container grid-2">
+        <div class="product-visual fade-in-up">
+            <!-- Ganti dengan gambar asli -->
+            <div style="background: var(--color-navy); width: 100%; height: 400px; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--color-gray); font-size: 1.2rem;">
+                [High-Res Image of {{ product.name }}]
+            </div>
+        </div>
+        <div class="product-info fade-in-up" style="transition-delay: 0.2s;">
+            <div class="section-label">{{ product.category }}</div>
+            <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">{{ product.name }}</h1>
+            <p class="hero-subtitle" style="font-size: 1.2rem; color: var(--color-steel); margin-bottom: 2rem;">{{ product.tagline }}</p>
+            <p style="line-height: 1.7; color: var(--color-navy); margin-bottom: 2rem;">{{ product.description }}</p>
+            
+            <a href="/contact?subject=Quote for {{ product.name }}" class="btn-primary">Request Official Quote</a>
+            <a href="/contact" class="btn-secondary" style="margin-left: 1rem;">Contact Technical Support</a>
+        </div>
+    </div>
+</section>
+
+<!-- Technical Specifications (Format Datasheet) -->
+<section class="section-padding bg-light">
+    <div class="container">
+        <h2 class="section-title fade-in-up" style="text-align: center; margin-bottom: 3rem;">Technical Specifications</h2>
+        
+        <div class="specs-container fade-in-up">
+            {% for category, specs in product.specs.items() %}
+            <div class="spec-category">
+                <h3>{{ category }}</h3>
+                <table class="specs-table">
+                    <tbody>
+                        {% for key, value in specs %}
+                        <tr>
+                            <td class="spec-key">{{ key }}</td>
+                            <td class="spec-value">{{ value }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Optional Extras / Accessories -->
+<section class="section-padding">
+    <div class="container">
+        <h2 class="section-title fade-in-up" style="text-align: center; margin-bottom: 3rem;">Modular Accessories & Optional Extras</h2>
+        <div class="grid-3 fade-in-up">
+            {% for extra in product.extras %}
+            <div class="extra-item">
+                <div class="check-icon">✓</div>
+                <span>{{ extra }}</span>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- CSS untuk Halaman Detail -->
+<style>
+    .bg-light { background-color: #f8f9fa; }
+    .specs-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+    .spec-category { background: var(--color-white); padding: 2rem; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 4px solid var(--color-gold); }
+    .spec-category h3 { color: var(--color-navy); font-size: 1.2rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--color-gray); padding-bottom: 0.5rem; }
+    .specs-table { width: 100%; border-collapse: collapse; }
+    .specs-table tr { border-bottom: 1px solid #eee; }
+    .specs-table tr:last-child { border-bottom: none; }
+    .spec-key { padding: 12px 0; color: var(--color-gray); font-size: 0.9rem; font-weight: 600; width: 45%; }
+    .spec-value { padding: 12px 0; color: var(--color-navy); font-weight: 700; font-size: 0.95rem; }
+    
+    .extra-item { display: flex; align-items: center; gap: 1rem; padding: 1rem; background: var(--color-white); border-radius: 6px; border: 1px solid #eee; }
+    .check-icon { color: var(--color-gold); font-weight: 900; font-size: 1.2rem; }
+
+    @media (max-width: 768px) {
+        .grid-2 { grid-template-columns: 1fr; }
+    }
+</style>
+
+{% endblock %}

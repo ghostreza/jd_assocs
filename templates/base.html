@@ -25,7 +25,7 @@
       "@type": "Organization",
       "name": "J&D Associates",
       "url": "https://www.jdassociates.com",
-      "logo": "https://www.jdassociates.com/static/images/logo.png",
+    "logo": "{{ url_for('static', filename='images/JDLOGO.png', _external=True) }}",
       "contactPoint": {
         "@type": "ContactPoint",
         "telephone": "+62-877-7538-2824",
@@ -39,12 +39,7 @@
         <nav class="navbar">
             <div class="logo-container">
                 <a href="/" class="logo-link">
-                    <!-- Inline SVG Logo Approximation -->
-                    <svg width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                        <polygon points="50,5 95,27.5 95,72.5 50,95 5,72.5 5,27.5" fill="#0A2540" stroke="#C9A227" stroke-width="2"/>
-                        <path d="M20,60 Q40,30 60,60 T90,50" fill="none" stroke="#1F4E79" stroke-width="4"/>
-                        <path d="M50,70 Q70,50 85,30" fill="none" stroke="#C9A227" stroke-width="3"/>
-                    </svg>
+                    <img class="brand-logo" src="{{ url_for('static', filename='images/JDLOGO.png') }}" alt="J&D Associates logo">
                     <span class="logo-text">J&D ASSOCIATES</span>
                 </a>
             </div>
@@ -68,7 +63,10 @@
     <footer class="main-footer">
         <div class="footer-content">
             <div class="footer-col">
-                <h3>J&D Associates</h3>
+                <a class="footer-brand" href="/">
+                    <img class="footer-logo" src="{{ url_for('static', filename='images/JDLOGO.png') }}" alt="J&D Associates logo">
+                    <span>J&D Associates</span>
+                </a>
                 <p>Your trusted partner in securing borders, protecting national assets, and exploring the ocean depths.</p>
             </div>
             <div class="footer-col">
