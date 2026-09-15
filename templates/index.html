@@ -12,6 +12,17 @@
 
 <!-- 1. HERO SECTION -->
 <section class="hero home-hero tactical-panel">
+    <!-- Grid Overlay + Titik Cahaya Menyusuri Grid -->
+    <div class="tactical-grid-container" aria-hidden="true">
+        <div class="tactical-grid"></div>
+        <div class="grid-pulses">
+            <span class="pulse pulse-h1"></span>
+            <span class="pulse pulse-h2"></span>
+            <span class="pulse pulse-v1"></span>
+            <span class="pulse pulse-v2"></span>
+        </div>
+    </div>
+
     <div class="hero-scan" aria-hidden="true"></div>
     <div class="hero-content fade-in-up">
         <div class="hero-tag">Defense Systems / Maritime / Electro-Optics</div>
@@ -40,7 +51,7 @@
             <div class="hero-product-caption"><span>ELECTRO-OPTICS</span><strong>Night Watcher M25</strong></div>
         </div>
         <div class="hero-product-slide">
-            <img src="{{ url_for('static', filename='images/nightdiver_1.jpg') }}" alt="Night Diver underwater night vision goggles">
+            <img src="{{ url_for('static', filename='images/nightdiver_1.png') }}" alt="Night Diver underwater night vision system">
             <div class="hero-product-caption"><span>ELECTRO-OPTICS</span><strong>Night Diver</strong></div>
         </div>
         <div class="hero-product-slide">
@@ -57,7 +68,6 @@
         </div>
     </div>
 </section>
-
 <!-- 2. MISSION BRIEF (ABOUT US) -->
 <section class="mission-brief section-padding">
     <div class="container grid-2">
@@ -126,6 +136,10 @@
         <!-- Format Penjelasan: Split Layout dengan Spesifikasi -->
         <div class="capability-row fade-in-up">
             <div class="cap-visual">
+                <a class="spotlight-image" href="/product/night-watcher-m25" aria-label="View Night Watcher M25 details">
+                    <img src="{{ url_for('static', filename='images/NightWatcher25_1.jpg') }}" alt="Night Watcher M25 night vision observation system">
+                    <span>VIEW PRODUCT</span>
+                </a>
                 <div class="cap-badge">FEATURED SYSTEM</div>
                 <h3>Night Watcher M25</h3>
                 <p class="cap-desc">A low-cost, high-performance Night Vision System incorporating a 95mm Catadioptic Objective Lens and 2nd/3rd Generation Image Intensifier.</p>
@@ -152,6 +166,10 @@
 
         <div class="capability-row reverse fade-in-up">
             <div class="cap-visual">
+                <a class="spotlight-image" href="/product/sea-chariot-mk3" aria-label="View Sea Chariot Mk3 details">
+                    <img src="{{ url_for('static', filename='images/seachariotmk3_1.jpg') }}" alt="Sea Chariot Mk3 military reconnaissance submersible">
+                    <span>VIEW PRODUCT</span>
+                </a>
                 <div class="cap-badge">FEATURED SYSTEM</div>
                 <h3>Sea Chariot Mk3</h3>
                 <p class="cap-desc">A highly maneuverable military submersible designed for reconnaissance, carrying three operators with a top surface speed of 35 knots.</p>
@@ -201,4 +219,105 @@
     </div>
 </section>
 
+<style>
+    .home-hero {
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* Container Latar Grid */
+    .tactical-grid-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        pointer-events: none;
+    }
+
+    /* Pattern Garis Grid (Ukuran 40px) */
+    .tactical-grid {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-image: 
+            linear-gradient(rgba(31, 78, 121, 0.25) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(31, 78, 121, 0.25) 1px, transparent 1px);
+        background-size: 40px 40px;
+    }
+
+    /* Elemen Titik Cahaya */
+    .pulse {
+        position: absolute;
+        border-radius: 50%;
+        background: #C9A227; /* Warna aksen emas taktis */
+        box-shadow: 0 0 8px 2px rgba(201, 162, 39, 0.9), 0 0 15px 4px rgba(0, 212, 255, 0.6);
+    }
+
+    /* Titik Horizontal 1 (Kiri ke Kanan) */
+    .pulse-h1 {
+        top: 120px; /* Pas pada garis grid 40px x 3 */
+        left: -10px;
+        width: 20px;
+        height: 2px;
+        animation: moveHorizontal 6s linear infinite;
+    }
+
+    /* Titik Horizontal 2 (Kanan ke Kiri) */
+    .pulse-h2 {
+        top: 280px; /* Pas pada garis grid 40px x 7 */
+        right: -10px;
+        width: 20px;
+        height: 2px;
+        animation: moveHorizontalReverse 8s linear infinite 2s;
+    }
+
+    /* Titik Vertikal 1 (Atas ke Bawah) */
+    .pulse-v1 {
+        left: 160px; /* Pas pada garis grid 40px x 4 */
+        top: -10px;
+        width: 2px;
+        height: 20px;
+        animation: moveVertical 7s linear infinite 1s;
+    }
+
+    /* Titik Vertikal 2 (Bawah ke Atas) */
+    .pulse-v2 {
+        left: 320px; /* Pas pada garis grid 40px x 8 */
+        bottom: -10px;
+        width: 2px;
+        height: 20px;
+        animation: moveVerticalReverse 9s linear infinite 3s;
+    }
+
+    /* Keyframes Animasi */
+    @keyframes moveHorizontal {
+        0% { left: -5%; opacity: 0; }
+        10% { opacity: 1; }
+        90% { opacity: 1; }
+        100% { left: 105%; opacity: 0; }
+    }
+
+    @keyframes moveHorizontalReverse {
+        0% { right: -5%; opacity: 0; }
+        10% { opacity: 1; }
+        90% { opacity: 1; }
+        100% { right: 105%; opacity: 0; }
+    }
+
+    @keyframes moveVertical {
+        0% { top: -5%; opacity: 0; }
+        10% { opacity: 1; }
+        90% { opacity: 1; }
+        100% { top: 105%; opacity: 0; }
+    }
+
+    @keyframes moveVerticalReverse {
+        0% { bottom: -5%; opacity: 0; }
+        10% { opacity: 1; }
+        90% { opacity: 1; }
+        100% { bottom: 105%; opacity: 0; }
+    }
+</style>
 {% endblock %}

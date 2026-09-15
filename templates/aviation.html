@@ -113,7 +113,7 @@
 <style>
     /* Hero & Animation Styles */
     .aviation-hero {
-        position: relative; height: 85vh; min-height: 600px; display: flex; align-items: center; justify-content: center;
+        position: relative; height: auto; min-height: calc(100svh - 78px); padding: clamp(4.5rem, 10vh, 7rem) 20px; display: flex; align-items: center; justify-content: center;
         background: linear-gradient(135deg, #0A2540 0%, #051626 100%); overflow: hidden;
     }
     .flyby-container { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none; }

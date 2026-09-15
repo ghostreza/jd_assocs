@@ -55,18 +55,57 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelector('.nav-links');
 
     if (hamburger && navLinks) {
+        const setMenuState = (isOpen) => {
+            navLinks.classList.toggle('mobile-open', isOpen);
+            hamburger.classList.toggle('is-open', isOpen);
+            hamburger.setAttribute('aria-expanded', String(isOpen));
+            hamburger.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+        };
+
         hamburger.addEventListener('click', () => {
-            const isOpen = navLinks.classList.toggle('mobile-open');
-            navLinks.style.display = isOpen ? 'flex' : 'none';
-            navLinks.style.flexDirection = 'column';
-            navLinks.style.position = 'absolute';
-            navLinks.style.top = '70px';
-            navLinks.style.right = '0';
-            navLinks.style.background = 'rgba(5,16,22,0.98)';
-            navLinks.style.width = '100%';
-            navLinks.style.padding = '20px';
-            navLinks.style.borderTop = '1px solid rgba(180,201,214,0.18)';
-            navLinks.style.zIndex = '1200';
+            setMenuState(!navLinks.classList.contains('mobile-open'));
+        });
+        navLinks.querySelectorAll('a').forEach((link) => {
+            link.addEventListener('click', () => setMenuState(false));
+        });
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') setMenuState(false);
+        });
+    }
+
+    const contactForm = document.querySelector('#contactForm');
+    if (contactForm) {
+        const subjectInput = contactForm.querySelector('[name="subject"]');
+        const querySubject = new URLSearchParams(window.location.search).get('subject');
+        if (querySubject && subjectInput && !subjectInput.value) subjectInput.value = querySubject;
+
+        contactForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+            const formData = new FormData(contactForm);
+            const name = formData.get('name');
+            const organization = formData.get('organization') || '-';
+            const need = formData.get('need');
+            const subject = formData.get('subject') || need;
+            const message = formData.get('message');
+            const body = `Hello J&D Associates,\n\nMy name is ${name}.\nOrganization: ${organization}\nRequirement: ${need}\nProduct / subject: ${subject}\n\n${message}\n\nThank you.`;
+            const channel = formData.get('channel');
+
+            if (channel === 'whatsapp') {
+                window.open(`https://wa.me/6287775382824?text=${encodeURIComponent(body)}`, '_blank', 'noopener');
+            } else {
+                window.location.href = `mailto:JD.associates800@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            }
+        });
+    }
+
+    const mainProductImage = document.querySelector('#productMainImage');
+    if (mainProductImage) {
+        document.querySelectorAll('.gallery-thumb').forEach((thumbnail) => {
+            thumbnail.addEventListener('click', () => {
+                mainProductImage.src = thumbnail.dataset.image;
+                document.querySelectorAll('.gallery-thumb').forEach((item) => item.classList.remove('is-active'));
+                thumbnail.classList.add('is-active');
+            });
         });
     }
 });

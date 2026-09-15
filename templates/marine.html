@@ -1,15 +1,79 @@
 {% extends "base.html" %}
 {% block content %}
-<section class="page-header">
-    <h1>Marine: Sea Chariots & Vessels</h1>
-    <p>High-performance underwater vehicles and specialized naval vessels for commercial and military applications.</p>
+
+<!-- 1. MARINE HERO SECTION (Underwater Tactical HUD) -->
+<section class="hero marine-header">
+    <!-- Latar Belakang Bawah Air + Tactical Grid -->
+    <div class="marine-bg" aria-hidden="true">
+        <!-- Efek Bias Cahaya Bawah Air (Caustics) -->
+        <div class="water-caustics"></div>
+
+        <!-- Grid Taktis Seragam -->
+        <div class="tactical-grid"></div>
+
+        <!-- Element Gelembung Air -->
+        <div class="bubbles">
+            <div class="bubble b1"></div>
+            <div class="bubble b2"></div>
+            <div class="bubble b3"></div>
+            <div class="bubble b4"></div>
+            <div class="bubble b5"></div>
+            <div class="bubble b6"></div>
+            <div class="bubble b7"></div>
+            <div class="bubble b8"></div>
+        </div>
+
+        <!-- Siluet Tanaman Air / Seaweed (Melambai) -->
+        <div class="seaweed-bed">
+            <!-- SVG Rumput Laut Kiri -->
+            <svg class="seaweed left-1" viewBox="0 0 100 300" preserveAspectRatio="none">
+                <path d="M50 300 C20 220 80 150 30 80 C10 40 40 10 50 0 C30 20 10 60 40 120 C70 180 30 240 40 300 Z" fill="rgba(5, 30, 45, 0.75)"/>
+            </svg>
+            <svg class="seaweed left-2" viewBox="0 0 100 300" preserveAspectRatio="none">
+                <path d="M40 300 C70 230 10 160 60 90 C80 50 50 10 45 0 C55 20 70 70 30 130 C-10 190 50 250 30 300 Z" fill="rgba(10, 45, 65, 0.6)"/>
+            </svg>
+
+            <!-- SVG Rumput Laut Kanan -->
+            <svg class="seaweed right-1" viewBox="0 0 100 300" preserveAspectRatio="none">
+                <path d="M50 300 C80 210 20 140 70 70 C90 30 60 5 50 0 C60 15 80 50 40 110 C0 170 60 230 45 300 Z" fill="rgba(5, 30, 45, 0.75)"/>
+            </svg>
+            <svg class="seaweed right-2" viewBox="0 0 100 300" preserveAspectRatio="none">
+                <path d="M60 300 C30 220 80 130 40 60 C20 30 45 10 50 0 C35 20 20 50 50 110 C80 170 30 230 50 300 Z" fill="rgba(10, 45, 65, 0.6)"/>
+            </svg>
+        </div>
+
+        <!-- HUD Corner Brackets -->
+        <div class="hud-corner tl"></div><div class="hud-corner tr"></div>
+        <div class="hud-corner bl"></div><div class="hud-corner br"></div>
+    </div>
+
+    <!-- Konten Utama -->
+    <div class="hero-content fade-in-up">
+        <div class="hero-tag decrypt-text" data-text="MARINE DIVISION / SEA CHARIOTS / NAVAL VESSELS" aria-label="Marine Division Sea Chariots Naval Vessels">
+            MARINE DIVISION / SEA CHARIOTS / NAVAL VESSELS
+        </div>
+        
+        <h1 class="decrypt-text" data-text="Uncompromising Mobility in the Crushing Depths." aria-label="Uncompromising Mobility in the Crushing Depths.">
+            Uncompromising Mobility in the Crushing Depths.
+        </h1>
+        
+        <p class="hero-subtitle">
+            Tactical superiority beneath the waves. From highly maneuverable 35-knot submersibles to specialized naval vessels, our systems are engineered to perform flawlessly under the relentless pressure of critical missions.
+        </p>
+        
+        <div class="hero-buttons">
+            <a href="#products" class="btn-primary">Explore Submersibles</a>
+            <a href="/contact?subject=Marine Vessel Inquiry" class="btn-secondary">Request Fleet Specifications</a>
+        </div>
+    </div>
 </section>
 
-<section class="products section-padding container">
+<!-- 2. PRODUCTS SECTION -->
+<section id="products" class="products marine-products section-padding container">
     <!-- Sea Chariot L380 -->
     <article class="product-card tactical-panel fade-in-up">
         <div class="product-image" style="background-color: var(--color-steel);">
-            <img src="{{ url_for('static', filename='images/seachariot_1.jpg') }}" alt="Sea Chariot L380 underwater vehicle">
+            <img src="{{ url_for('static', filename='images/seachariot_1.jpg') }}" alt="Sea Chariot L380 underwater vehicle" style="width: 100%; height: 100%; object-fit: cover;">
         </div>
         <div class="product-details">
             <h2>SEA CHARIOT L380</h2>
@@ -19,14 +83,15 @@
                 <li><strong>Length:</strong> 3.8m | <strong>Weight:</strong> 250 Kg</li>
                 <li><strong>Speed:</strong> 3 knots | <strong>Power:</strong> 48v 200ampH Lithium</li>
             </ul>
-            <a href="/contact" class="btn-gold">Request Quote</a>
+            <a href="/product/sea-chariot-l380" class="btn-secondary product-detail-link">View full specifications</a>
+            <a href="/contact?subject=Quote for Sea Chariot L380" class="btn-gold">Request Official Quote</a>
         </div>
     </article>
 
     <!-- Sea Chariot Mk3 -->
     <article class="product-card tactical-panel fade-in-up reverse">
         <div class="product-image" style="background-color: var(--color-navy);">
-            <img src="{{ url_for('static', filename='images/seachariotmk3_1.jpg') }}" alt="Sea Chariot Mk3 reconnaissance submersible">
+            <img src="{{ url_for('static', filename='images/seachariotmk3_1.jpg') }}" alt="Sea Chariot Mk3 reconnaissance submersible" style="width: 100%; height: 100%; object-fit: cover;">
         </div>
         <div class="product-details">
             <h2>SEA CHARIOT Mk3</h2>
@@ -36,14 +101,15 @@
                 <li><strong>Length:</strong> 7.60m | <strong>Operational Weight:</strong> 2500 Kg</li>
                 <li><strong>Surface Range:</strong> 150 miles | <strong>Underwater Speed:</strong> 3.5 knots</li>
             </ul>
-            <a href="/contact" class="btn-gold">Request Quote</a>
+            <a href="/product/sea-chariot-mk3" class="btn-secondary product-detail-link">View full specifications</a>
+            <a href="/contact?subject=Quote for Sea Chariot Mk3" class="btn-gold">Request Official Quote</a>
         </div>
     </article>
 
     <!-- MV Quicksilver VI -->
     <article class="product-card tactical-panel fade-in-up">
         <div class="product-image" style="background-color: var(--color-gray);">
-            <img src="{{ url_for('static', filename='images/mvquicksilverVI_1.jpg') }}" alt="MV Quicksilver VI catamaran">
+            <img src="{{ url_for('static', filename='images/mvquicksilverVI_1.jpg') }}" alt="MV Quicksilver VI catamaran" style="width: 100%; height: 100%; object-fit: cover;">
         </div>
         <div class="product-details">
             <h2>MV QUICKSILVER VI</h2>
@@ -53,8 +119,169 @@
                 <li><strong>LOA:</strong> 38.6m | <strong>Beam:</strong> 15.6m</li>
                 <li><strong>Engines:</strong> 2 x Detroit Marine Diesel (1195 KW V16)</li>
             </ul>
-            <a href="/contact" class="btn-gold">Inquire About Vessel</a>
+            <a href="/product/mv-quicksilver-vi" class="btn-secondary product-detail-link">View full specifications</a>
+            <a href="/contact?subject=Inquiry for MV Quicksilver VI" class="btn-gold">Inquire About Vessel</a>
         </div>
     </article>
 </section>
+
+<!-- CSS KHUSUS MARINE -->
+<style>
+    /* Hero Marine Container */
+    .marine-header {
+        position: relative;
+        height: auto;
+        min-height: calc(100svh - 78px);
+        padding: clamp(4.5rem, 10vh, 7rem) 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: radial-gradient(circle at 50% 20%, #0c3358 0%, #04121e 80%);
+        overflow: hidden;
+        text-align: center;
+    }
+
+    .marine-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none; }
+
+    /* 1. Efek Caustics (Pantulan Cahaya Air) */
+    .water-caustics {
+        position: absolute;
+        top: 0; left: 0; width: 100%; height: 100%;
+        background: radial-gradient(ellipse at center, rgba(0, 212, 255, 0.12) 0%, rgba(0, 0, 0, 0) 70%);
+        filter: blur(20px);
+        animation: causticsMove 8s ease-in-out infinite alternate;
+        z-index: 1;
+    }
+
+    @keyframes causticsMove {
+        0% { transform: scale(1) translate(0, 0); opacity: 0.5; }
+        100% { transform: scale(1.2) translate(-2%, 3%); opacity: 0.8; }
+    }
+
+    /* 2. Tactical Grid Overlay */
+    .tactical-grid {
+        position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+        background-image: 
+            linear-gradient(rgba(31, 78, 121, 0.25) 1px, transparent 1px), 
+            linear-gradient(90deg, rgba(31, 78, 121, 0.25) 1px, transparent 1px);
+        background-size: 40px 40px;
+        z-index: 2;
+    }
+
+    /* 3. Animasi Gelembung Air */
+    .bubbles { position: absolute; width: 100%; height: 100%; z-index: 3; }
+    .bubble {
+        position: absolute;
+        bottom: -50px;
+        background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.1) 60%, rgba(255, 255, 255, 0.4));
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        border-radius: 50%;
+        box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.5);
+        animation: floatUp 8s infinite ease-in, wobble 3s infinite ease-in-out;
+    }
+
+    /* Variasi Gelembung (Posisi & Ukuran) */
+    .b1 { left: 10%; width: 12px; height: 12px; animation-duration: 7s; animation-delay: 0s; }
+    .b2 { left: 25%; width: 22px; height: 22px; animation-duration: 10s; animation-delay: 2s; }
+    .b3 { left: 40%; width: 8px;  height: 8px;  animation-duration: 6s;  animation-delay: 1s; }
+    .b4 { left: 55%; width: 18px; height: 18px; animation-duration: 9s;  animation-delay: 3s; }
+    .b5 { left: 70%; width: 14px; height: 14px; animation-duration: 8s;  animation-delay: 0.5s; }
+    .b6 { left: 85%; width: 26px; height: 26px; animation-duration: 11s; animation-delay: 1.5s; }
+    .b7 { left: 30%; width: 10px; height: 10px; animation-duration: 7.5s;animation-delay: 4s; }
+    .b8 { left: 78%; width: 16px; height: 16px; animation-duration: 8.5s;animation-delay: 2.5s; }
+
+    @keyframes floatUp {
+        0% { bottom: -30px; opacity: 0; }
+        10% { opacity: 0.8; }
+        90% { opacity: 0.8; }
+        100% { bottom: 105%; opacity: 0; }
+    }
+
+    @keyframes wobble {
+        0%, 100% { transform: translateX(0); }
+        50% { transform: translateX(15px); }
+    }
+
+    /* 4. Siluet Tanaman Air / Rumput Laut */
+    .seaweed-bed {
+        position: absolute;
+        bottom: 0; left: 0; width: 100%;
+        height: 220px;
+        z-index: 2;
+        pointer-events: none;
+    }
+    .seaweed {
+        position: absolute;
+        bottom: 0;
+        height: 100%;
+        transform-origin: bottom center;
+        animation: sway 5s ease-in-out infinite alternate;
+    }
+    .seaweed.left-1 { left: 2%; width: 120px; animation-duration: 4.5s; }
+    .seaweed.left-2 { left: 8%; width: 90px; animation-duration: 6s; animation-delay: -1s; }
+    .seaweed.right-1 { right: 2%; width: 130px; animation-duration: 5.2s; animation-delay: -0.5s; }
+    .seaweed.right-2 { right: 9%; width: 100px; animation-duration: 4.8s; animation-delay: -2s; }
+
+    @keyframes sway {
+        0% { transform: rotate(-4deg) skewX(-2deg); }
+        100% { transform: rotate(5deg) skewX(3deg); }
+    }
+
+    /* 5. HUD Corner Brackets */
+    .hud-corner { position: absolute; width: 30px; height: 30px; border: 2px solid rgba(201, 162, 39, 0.6); z-index: 4; }
+    .tl { top: 8%; left: 8%; border-right: none; border-bottom: none; }
+    .tr { top: 8%; right: 8%; border-left: none; border-bottom: none; }
+    .bl { bottom: 8%; left: 8%; border-right: none; border-top: none; }
+    .br { bottom: 8%; right: 8%; border-left: none; border-top: none; }
+
+    /* Hero Text & Button Styling */
+    .hero-content { position: relative; z-index: 10; max-width: 800px; padding: 0 20px; }
+    
+    .hero-subtitle {
+        font-size: 1.15rem;
+        line-height: 1.6;
+        color: #d1d9e0;
+        margin-bottom: 2.5rem;
+        max-width: 650px;
+        margin-left: auto;
+        margin-right: auto;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    }
+
+    .decrypt-text .scramble-char { color: #C9A227; font-family: 'Courier New', Courier, monospace; font-weight: 400; }
+    
+    .hero-tag.decrypt-text {
+        font-size: 0.85rem; letter-spacing: 3px; text-transform: uppercase;
+        color: #8B98A9; margin-bottom: 1.5rem; font-weight: 700;
+    }
+    .hero-tag.decrypt-text .scramble-char { color: #1F4E79; }
+
+    .marine-header h1.decrypt-text {
+        font-size: 3.5rem; font-weight: 700; line-height: 1.2;
+        margin-bottom: 1.5rem; color: #F4F7FA;
+        text-shadow: 0 4px 12px rgba(0,0,0,0.6);
+    }
+
+    /* Product Card Styling */
+    .product-card {
+        display: flex; background: var(--color-white); margin-bottom: 3rem;
+        border-radius: 12px; overflow: hidden; box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+        flex-direction: row;
+    }
+    .product-card.reverse { flex-direction: row-reverse; }
+    .product-image { flex: 1; min-height: 350px; }
+    .product-details { flex: 1; padding: 3rem; display: flex; flex-direction: column; justify-content: center; }
+    .product-details h2 { color: var(--color-navy); font-size: 2rem; margin-bottom: 0.5rem; }
+    .subtitle { color: var(--color-gold); font-weight: 700; margin-bottom: 1.5rem; text-transform: uppercase; font-size: 0.9rem; }
+    .specs { margin: 1.5rem 0; padding-left: 1.5rem; border-left: 3px solid var(--color-gray); list-style: none; }
+    .specs li { margin-bottom: 0.5rem; color: var(--color-navy); }
+
+    @media (max-width: 900px) {
+        .marine-header h1.decrypt-text { font-size: 2.2rem; }
+        .product-card, .product-card.reverse { flex-direction: column; }
+        .product-image { min-height: 250px; }
+        .seaweed-bed { height: 140px; }
+    }
+</style>
+
 {% endblock %}

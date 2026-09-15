@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="contact-page">
+	<div class="contact-intro fade-in-up">
+		<div class="section-label">SECURE INQUIRY CHANNEL</div>
+		<h1>Tell us what your operation needs.</h1>
+		<p>Choose the most convenient channel and prepare a clear inquiry for our team. Your message will open in your email client or WhatsApp with the relevant details already formatted.</p>
+		<div class="contact-direct">
+			<a href="mailto:JD.associates800@gmail.com">JD.associates800@gmail.com</a>
+			<span>+62 877-7538-2824</span>
+		</div>
+	</div>
+
+	<div class="contact-layout">
+		<form class="contact-form tactical-panel fade-in-up" id="contactForm">
+			<div class="form-heading">
+				<span>01</span>
+				<h2>Prepare your inquiry</h2>
+			</div>
+
+			<div class="form-grid">
+				<label>
+					<span>Your name <b>*</b></span>
+					<input type="text" name="name" autocomplete="name" placeholder="Full name" required>
+				</label>
+				<label>
+					<span>Organization</span>
+					<input type="text" name="organization" autocomplete="organization" placeholder="Company or agency">
+				</label>
+			</div>
+
+			<label>
+				<span>What do you need? <b>*</b></span>
+				<select name="need" id="needSelect" required>
+					<option value="">Select a requirement</option>
+					<option value="Marine vessel or submersible">Marine vessel or submersible</option>
+					<option value="Aviation aircraft or spare parts">Aviation aircraft or spare parts</option>
+					<option value="Electro-optics or night vision">Electro-optics or night vision</option>
+					<option value="Technical consultation">Technical consultation</option>
+					<option value="Partnership or other inquiry">Partnership or other inquiry</option>
+				</select>
+			</label>
+
+			<label>
+				<span>Product or subject</span>
+				<input type="text" name="subject" id="subjectInput" placeholder="e.g. Sea Chariot L380">
+			</label>
+
+			<label>
+				<span>Message <b>*</b></span>
+				<textarea name="message" rows="6" placeholder="Tell us about your requirement, quantity, timeline, or operating environment." required></textarea>
+			</label>
+
+			<div class="channel-choice">
+				<div class="form-heading compact">
+					<span>02</span>
+					<h2>Choose a channel</h2>
+				</div>
+				<div class="channel-options">
+					<label class="channel-option">
+						<input type="radio" name="channel" value="email" checked>
+						<span><strong>Email</strong><small>For detailed specifications and documents</small></span>
+					</label>
+					<label class="channel-option">
+						<input type="radio" name="channel" value="whatsapp">
+						<span><strong>WhatsApp</strong><small>For a direct conversation with our team</small></span>
+					</label>
+				</div>
+			</div>
+
+			<button class="btn-primary contact-submit" type="submit">Open formatted message <span aria-hidden="true">&rarr;</span></button>
+			<p class="form-note">Your message opens in a new app. No information is submitted or stored on this website.</p>
+		</form>
+
+		<aside class="contact-aside fade-in-up">
+			<div class="aside-marker">J&D / CONTACT DESK</div>
+			<h2>One brief.<br><em>Clear direction.</em></h2>
+			<p>Include the equipment, intended use, location, and desired timeline. The more context you share, the faster our team can route your inquiry.</p>
+			<div class="aside-line"></div>
+			<dl>
+				<div><dt>EMAIL</dt><dd>JD.associates800@gmail.com</dd></div>
+				<div><dt>WHATSAPP</dt><dd>+62 877-7538-2824</dd></div>
+				<div><dt>RESPONSE</dt><dd>Business hours, GMT+7</dd></div>
+			</dl>
+		</aside>
+	</div>
+</section>
+{% endblock %}
