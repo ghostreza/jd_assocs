@@ -5,7 +5,7 @@
 <div class="product-breadcrumb container">
     <a href="/">Home</a>
     <span>/</span>
-    <a href="{% if product.category == 'Marine' %}/marine{% elif product.category == 'Aviation' %}/aviation{% else %}/electro-optics{% endif %}">{{ product.category }}</a>
+    <a href="{% if product.category == 'Craft for Sale' %}{{ url_for('craft_for_sale') }}{% elif product.category == 'Marine' %}/marine{% elif product.category == 'Aviation' %}/aviation{% else %}/electro-optics{% endif %}">{{ product.category }}</a>
     <span>/</span>
     <strong>{{ product.name }}</strong>
 </div>
@@ -106,6 +106,7 @@
 {% endif %}
 
 <!-- Optional Extras / Accessories -->
+{% if product.extras %}
 <section class="section-padding">
     <div class="container">
         <h2 class="section-title fade-in-up">Modular Accessories & Optional Extras</h2>
@@ -119,6 +120,7 @@
         </div>
     </div>
 </section>
+{% endif %}
 
 <!-- CSS & JS untuk Halaman Detail -->
 <style>

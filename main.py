@@ -29,20 +29,20 @@ PRODUCTS = {
             'Dimensions & Weight': [
                 ('Overall Length', '3.8 meters'),
                 ('Maximum Height', '0.7 meters'),
-                ('Max Width (fins extended)', '1.85 meters'),
-                ('Max Width (fins retracted)', '1.105 meters'),
+                ('Max Width (fins extended)', '1.80 meters'),
+                ('Max Width (fins retracted)', '1.10 meters'),
                 ('Weight in Air', 'Typically 250 Kg'),
-                ('Air Supply', '4 x 15lt 300BAR tanks')
+                ('Air Supply', '4 x 15lt 200BAR tanks')
             ],
             'Electrical & Propulsion': [
                 ('Operation Control', 'Spring loaded button switch Joy Stick'),
-                ('Power Source', '48v 200ampH Lithium Battery Bank with full BMS protection (waterproof)'),
+                ('Power Source', '36v 200ampH Lithium Battery Bank with full BMS protection (waterproof)'),
                 ('Recharge Time', 'Less than 3 hours'),
-                ('Operational Duration', 'Approx. 3 hours (subject to water conditions)')
+                ('Operational Duration', '5 hours (at 3 knots) or 2 hours (at 4 knots)')
             ]
         },
         'standard_supply': [
-            'Sea Chariot with 48v 200ampH Lithium Battery & BMS protection',
+            'Sea Chariot with 36v 200ampH Lithium Battery & BMS protection',
             'Depth Gauge & Compass',
             'Battery Status Indicators',
             '3 Air Cylinders and Contents Gauges',
@@ -129,6 +129,49 @@ PRODUCTS = {
             'Special Navigation Modules',
             'Alternative instrumentation and support equipment (available on consultation)'
         ]
+    },
+    'patrol-boat-808': {
+        'name': 'PATROL BOAT 808',
+        'category': 'Craft for Sale',
+        'image': 'patrolboat.jpg',
+        'gallery': ['patrolboat.jpg'],
+        'tagline': '17m GRP Patrol Craft for Police, Coast Guard, Diving, and Offshore Operations',
+        'description': (
+            'PATROL BOAT 808 is a 17-metre craft constructed from GRP and designed for Police or Coast Guard '
+            'operations. It is also suitable for commercial diving or offshore oil exploration. Launched in '
+            '1999, the vessel is reported to be in very good condition. The photograph shown is a patrol craft '
+            'reference and is not confirmed as PATROL BOAT 808.'
+        ),
+        'specs': {
+            'Physical Specifications': [
+                ('Length Overall', '17.0 meters'),
+                ('Beam Overall', '5.0 meters'),
+                ('Designed Draft', '0.48 meters'),
+                ('Designed Displacement', '2.80 meters'),
+                ('Light Mass of Boat', '1.8 tons'),
+                ('Total Mass of Boat', '3.40 tons'),
+                ('Maximum Number of Passengers', '16 persons'),
+                ('Minimum Crew', '2 persons'),
+                ('Hull Construction', 'GRP'),
+                ('Year Launched', '1999'),
+                ('Reported Condition', 'Very good')
+            ],
+            'Propulsion Specifications': [
+                ('Standard Engines', '2 x AIFO 8293 SRM 1000'),
+                ('Fuel', 'Diesel'),
+                ('Maximum Power', 'Not provided'),
+                ('Maximum Surface Speed', '30 knots'),
+                ('Cruising Speed', '25 knots')
+            ]
+        },
+        'vessel_highlights': [
+            'Designed for Police or Coast Guard operations',
+            'Also suitable for commercial diving or offshore oil exploration',
+            'The vessel information is given in good faith but without guarantee',
+            'Offered subject to sale, price change, location change, or withdrawal without notice',
+            'The displayed patrol craft photograph is for reference and is not confirmed as this vessel'
+        ],
+        'extras': []
     },
     'mv-quicksilver-vi': {
         'name': 'MV QUICKSILVER VI',
@@ -263,8 +306,8 @@ PRODUCTS = {
     'night-seeker-mod-45135t': {
         'name': 'NIGHT SEEKER Mod-45135T',
         'category': 'Electro-Optics',
-        'image': 'nightseekermod_1.jpeg',
-        'gallery': ['nightseekermod_1.jpeg', 'nightseekermod_2.jpeg'],
+        'image': 'nightseekermod_1.jpg',
+        'gallery': ['nightseekermod_1.jpg', 'nightseekermod_2.jpeg'],
         'tagline': 'Rugged Day/Night Thermal Observation System',
         'description': (
             'The NIGHT SEEKER Mod-45135T is a rugged Observation System (OS) designed for short to '
@@ -379,8 +422,8 @@ PRODUCTS = {
     'night-diver': {
         'name': 'NIGHT DIVER',
         'category': 'Electro-Optics',
-        'image': 'nightdiver_1.png',
-        'gallery': ['nightdiver_1.png', 'nightdiver_2.png', 'nightdiver_3.jpg'],
+        'image': 'nightdiver_1.jpg',
+        'gallery': ['nightdiver_1.jpg', 'nightdiver_2.png', 'nightdiver_3.jpg'],
         'tagline': 'Superior Underwater Night Vision Goggle',
         'description': (
             'The NIGHT DIVER is a superior Underwater Night Vision Goggle permitting observation '
@@ -437,7 +480,7 @@ PRODUCTS = {
         'name': 'NIGHT SHARK',
         'category': 'Electro-Optics',
         'image': 'nightshark_1.jpg',
-        'gallery': ['nightshark_1.jpg', 'nightshark_2.jpg'],
+        'gallery': ['nightshark_1.jpg', 'nightshark_2.jpg', 'nightshark_3.png', 'nightshark_4.JPG'],
         'tagline': 'Compact Waterproof Handheld Night Vision System',
         'description': (
             'The NIGHT SHARK is a compact, waterproof, and extremely high-performance 2nd or 3rd '
@@ -576,6 +619,14 @@ def aviation():
 @app.route('/electro-optics')
 def electro_optics():
     return render_template('electro_optics.html', title='Electro-Optics: Night Vision & Lighting')
+
+@app.route('/craft-for-sale')
+def craft_for_sale():
+    return render_template('craft_for_sale.html', title='Craft for Sale | J&D Associates')
+
+@app.route('/associates')
+def associates():
+    return render_template('associates.html', title='Associates | J&D Associates')
 
 @app.route('/contact')
 def contact():

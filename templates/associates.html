@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section class="associates-hero section-padding">
+    <canvas class="associates-network-canvas" aria-hidden="true"></canvas>
+    <div class="associates-hero-inner">
+        <div class="section-label">J&amp;D ASSOCIATES / COMPANY PROFILE</div>
+        <h1>Associates</h1>
+        <p>J&amp;D Associates connects clients with specialist equipment and support for demanding maritime, aviation, security, and defense requirements.</p>
+        <a class="btn-primary" href="{{ url_for('contact') }}">Discuss a Requirement</a>
+    </div>
+</section>
+
+<section class="associates-overview section-padding">
+    <div class="associates-copy">
+        <div class="section-label">OUR APPROACH</div>
+        <h2>A practical partner for critical operations</h2>
+        <p>We work with organizations seeking dependable equipment for environments where readiness, reliability, and technical fit matter. Our team helps clarify requirements and connects each inquiry to the appropriate product or capability area.</p>
+        <p>From initial consultation through product information and quotation requests, J&amp;D Associates provides a direct point of contact for customers evaluating specialized systems.</p>
+    </div>
+    <div class="associates-domains" aria-label="J&D Associates capability areas">
+        <a href="{{ url_for('marine') }}"><span>01</span><div><h3>Marine</h3><p>Submersibles, underwater systems, and specialist vessels.</p></div><b aria-hidden="true">&rarr;</b></a>
+        <a href="{{ url_for('aviation') }}"><span>02</span><div><h3>Aviation</h3><p>Aircraft acquisition support and aviation spare parts.</p></div><b aria-hidden="true">&rarr;</b></a>
+        <a href="{{ url_for('electro_optics') }}"><span>03</span><div><h3>Electro-Optics</h3><p>Night vision and observation systems for low-light operations.</p></div><b aria-hidden="true">&rarr;</b></a>
+    </div>
+</section>
+
+<section class="associates-contact section-padding">
+    <div class="associates-contact-inner">
+        <div>
+            <div class="section-label">START A CONVERSATION</div>
+            <h2>Tell us what your operation needs.</h2>
+        </div>
+        <a class="btn-primary" href="{{ url_for('contact', subject='Business and partnership inquiry') }}">Contact J&amp;D Associates</a>
+    </div>
+</section>
+
+<style>
+    .associates-hero { position: relative; isolation: isolate; overflow: hidden; min-height: 390px; display: flex; align-items: center; background: radial-gradient(ellipse at 78% 20%, rgba(193, 154, 88, 0.16), transparent 36%), linear-gradient(115deg, #102c35, #07151d 70%); border-bottom: 1px solid var(--color-border); }
+    .associates-hero-inner, .associates-copy, .associates-contact-inner { width: min(100%, 1120px); margin: 0 auto; }
+    .associates-hero-inner { position: relative; z-index: 1; }
+    .associates-hero h1 { color: var(--color-white); font-size: clamp(2.5rem, 5vw, 4rem); line-height: 1.05; margin: 0 0 1.2rem; }
+    .associates-hero p { max-width: 700px; color: rgba(232, 237, 242, 0.78); margin: 0 0 2rem; font-size: 1.05rem; }
+    .associates-overview { display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); gap: clamp(2rem, 7vw, 7rem); align-items: start; background: linear-gradient(180deg, #0a1d27, #07151d); }
+    .associates-copy { width: auto; }
+    .associates-copy h2, .associates-contact h2 { color: var(--color-white); font-size: clamp(1.7rem, 3vw, 2.35rem); line-height: 1.2; margin: 0 0 1.2rem; }
+    .associates-copy p { color: rgba(232, 237, 242, 0.72); margin-bottom: 1rem; }
+    .associates-domains { border-top: 1px solid var(--color-border); }
+    .associates-domains a { display: grid; grid-template-columns: 48px 1fr 24px; gap: 1rem; align-items: center; padding: 1.25rem 0; border-bottom: 1px solid var(--color-border); }
+    .associates-domains a:hover h3, .associates-domains a:hover b { color: var(--color-gold-soft); }
+    .associates-domains a > span { color: var(--color-gold-soft); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; }
+    .associates-domains h3 { color: var(--color-white); font-size: 1.1rem; margin-bottom: 0.15rem; }
+    .associates-domains p { color: var(--color-gray); font-size: 0.9rem; }
+    .associates-domains b { color: rgba(232, 237, 242, 0.6); font-size: 1.2rem; }
+    .associates-contact { background: #0d2832; border-top: 1px solid rgba(105, 204, 202, 0.2); }
+    .associates-contact-inner { display: flex; align-items: center; justify-content: space-between; gap: 2rem; }
+    .associates-contact h2 { margin: 0; }
+    @media (max-width: 760px) {
+        .associates-overview { grid-template-columns: 1fr; }
+        .associates-contact-inner { align-items: flex-start; flex-direction: column; }
+    }
+</style>
+
+{% endblock %}

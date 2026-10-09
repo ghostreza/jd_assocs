@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section class="craft-hero section-padding">
+    <canvas class="craft-economy-canvas" aria-hidden="true"></canvas>
+    <div class="craft-hero-inner">
+        <div class="section-label">MARINE ASSET / CURRENT LISTING</div>
+        <h1>Craft for Sale</h1>
+        <p>Explore the vessel currently presented by J&amp;D Associates. Contact our team to confirm availability, request further particulars, or arrange a conversation.</p>
+        <a class="btn-primary" href="#available-craft">View Available Craft</a>
+    </div>
+</section>
+
+<section id="available-craft" class="craft-listing section-padding">
+    <article class="craft-feature">
+        <div class="craft-image">
+            <img src="{{ url_for('static', filename='images/mvquicksilverVI_1.jpg') }}" alt="MV Quicksilver VI aluminium catamaran">
+            <span class="craft-image-label">MARINE / CATAMARAN</span>
+        </div>
+        <div class="craft-details">
+            <div class="section-label">VESSEL LISTING</div>
+            <h2>MV Quicksilver VI</h2>
+            <p class="craft-summary">A 38.6-metre aluminium catamaran, built in Australia by NQEA and currently located in Jakarta, Indonesia. The vessel is configured for ferry and pleasure-event operations.</p>
+            <dl class="craft-specs">
+                <div><dt>Length overall</dt><dd>38.6 m</dd></div>
+                <div><dt>Beam</dt><dd>15.6 m</dd></div>
+                <div><dt>Passenger capacity</dt><dd>160 to 330</dd></div>
+                <div><dt>Classification</dt><dd>Det Norske Veritas</dd></div>
+                <div><dt>Location</dt><dd>Jakarta, Indonesia</dd></div>
+                <div><dt>Builder</dt><dd>NQEA, Australia</dd></div>
+            </dl>
+            <div class="craft-actions">
+                <a class="btn-primary" href="{{ url_for('product_detail', slug='mv-quicksilver-vi') }}">View Vessel Details</a>
+                <a class="btn-secondary" href="{{ url_for('contact', subject='Inquiry for MV Quicksilver VI') }}">Enquire About This Vessel</a>
+            </div>
+            <p class="availability-note">Availability and vessel particulars are subject to confirmation.</p>
+        </div>
+    </article>
+
+    <article class="craft-feature">
+        <div class="craft-image">
+            <img src="{{ url_for('static', filename='images/patrolboat.jpg') }}" alt="Patrol boat photo reference for the PATROL BOAT 808 listing">
+            <span class="craft-image-label">PATROL CRAFT / PHOTO REFERENCE</span>
+        </div>
+        <div class="craft-details">
+            <div class="section-label">VESSEL LISTING</div>
+            <h2>PATROL BOAT 808</h2>
+            <p class="craft-summary">A 17-metre GRP patrol craft launched in 1999 and reported to be in very good condition. Designed for Police or Coast Guard operations, with suitability for commercial diving and offshore oil exploration.</p>
+            <dl class="craft-specs">
+                <div><dt>Length overall</dt><dd>17.0 m</dd></div>
+                <div><dt>Standard engines</dt><dd>2 x AIFO 8293 SRM 1000 Diesel</dd></div>
+                <div><dt>Maximum surface speed</dt><dd>30 knots</dd></div>
+                <div><dt>Maximum passengers</dt><dd>16 persons</dd></div>
+            </dl>
+            <div class="craft-actions">
+                <a class="btn-primary" href="{{ url_for('product_detail', slug='patrol-boat-808') }}">View Vessel Details</a>
+                <a class="btn-primary" href="{{ url_for('contact', subject='Inquiry for PATROL BOAT 808') }}">Enquire About This Vessel</a>
+            </div>
+            <p class="availability-note">The photograph is provided as a patrol craft reference and is not confirmed as PATROL BOAT 808. Vessel information is given in good faith without guarantee. The vessel is offered subject to sale, price change, location change, or withdrawal without notice.</p>
+        </div>
+    </article>
+</section>
+
+<style>
+    .craft-hero {
+        position: relative;
+        isolation: isolate;
+        overflow: hidden;
+        min-height: 390px;
+        display: flex;
+        align-items: center;
+        background: radial-gradient(ellipse at 78% 15%, rgba(43, 142, 149, 0.2), transparent 38%), linear-gradient(115deg, #09232d, #07151d 68%);
+        border-bottom: 1px solid var(--color-border);
+    }
+    .craft-economy-canvas { position: absolute; inset: 0; z-index: 0; display: block; width: 100%; height: 100%; pointer-events: none; }
+    .craft-hero-inner { position: relative; z-index: 1; width: min(100%, 1120px); margin: 0 auto; }
+    .craft-hero h1 { color: var(--color-white); font-size: clamp(2.5rem, 5vw, 4rem); line-height: 1.05; margin: 0 0 1.2rem; }
+    .craft-hero p { max-width: 680px; color: rgba(232, 237, 242, 0.78); margin: 0 0 2rem; font-size: 1.05rem; }
+    @media (max-width: 760px) {
+        .craft-hero { min-height: 460px; align-items: flex-start; padding-top: 3rem; padding-bottom: 11rem; }
+    }
+    .craft-listing { background: linear-gradient(180deg, #0a1d27, #07151d); }
+    .craft-feature { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(360px, 0.9fr); max-width: 1280px; margin: 0 auto; border: 1px solid rgba(105, 204, 202, 0.25); border-left: 3px solid #58b9b4; background: rgba(7, 27, 37, 0.82); }
+    .craft-feature + .craft-feature { margin-top: 2rem; }
+    .craft-image { position: relative; min-height: 470px; background: #061721; }
+    .craft-image img { display: block; width: 100%; height: 100%; min-height: 470px; object-fit: cover; }
+    .craft-image-label { position: absolute; left: 1.5rem; bottom: 1.5rem; padding: 0.5rem 0.75rem; color: var(--color-white); background: rgba(5, 16, 22, 0.86); border-left: 2px solid var(--color-gold-soft); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; }
+    .craft-details { padding: clamp(1.5rem, 4vw, 3.5rem); }
+    .craft-details h2 { color: var(--color-white); font-size: clamp(1.75rem, 3vw, 2.5rem); margin-bottom: 0.8rem; }
+    .craft-summary { color: rgba(232, 237, 242, 0.76); margin-bottom: 1.6rem; }
+    .craft-specs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: 1px solid var(--color-border); margin-bottom: 1.7rem; }
+    .craft-specs div { padding: 0.9rem 0.7rem 0.9rem 0; border-bottom: 1px solid var(--color-border); }
+    .craft-specs dt { color: var(--color-gray); font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.08em; }
+    .craft-specs dd { color: var(--color-white); font-weight: 600; margin-top: 0.2rem; }
+    .craft-actions { display: flex; flex-wrap: wrap; gap: 0.8rem; }
+    .craft-actions a { text-align: center; }
+    .availability-note { color: var(--color-gray); font-size: 0.78rem; margin-top: 1.2rem; }
+    @media (max-width: 800px) {
+        .craft-feature { grid-template-columns: 1fr; }
+        .craft-image, .craft-image img { min-height: 320px; max-height: 440px; }
+    }
+    @media (max-width: 520px) {
+        .craft-specs { grid-template-columns: 1fr; }
+        .craft-actions { flex-direction: column; }
+    }
+</style>
+
+{% endblock %}
