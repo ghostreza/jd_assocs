@@ -352,7 +352,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (channel === 'whatsapp') {
                 window.open(`https://wa.me/6287775382824?text=${encodeURIComponent(body)}`, '_blank', 'noopener');
             } else {
-                window.location.href = `mailto:JD.associates800@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                window.location.href = `mailto:jd.associates800@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
             }
         });
     }
