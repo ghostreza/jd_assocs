@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vantage Solutions — Brand Guidelines</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --deep-slate: #2C3E50;
+    --sage-green: #8FAE8B;
+    --sage-dark: #6B8E6B;
+    --warm-beige: #F5EFE6;
+    --cream: #FAF7F2;
+    --soft-gray: #E8E4DC;
+    --text-dark: #2C3E50;
+    --text-muted: #6B7280;
+    --accent-gold: #C9A961;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-dark);
+    background: var(--cream);
+    line-height: 1.7;
+    font-weight: 400;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Lora', serif;
+    font-weight: 500;
+    line-height: 1.3;
+    color: var(--deep-slate);
+  }
+
+  /* Header */
+  header {
+    background: var(--cream);
+    padding: 2.5rem 2rem;
+    border-bottom: 1px solid var(--soft-gray);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(10px);
+  }
+
+  .header-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .logo {
+    font-family: 'Lora', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--deep-slate);
+    letter-spacing: -0.5px;
+  }
+
+  .logo span { color: var(--sage-dark); font-style: italic; }
+
+  nav ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    flex-wrap: wrap;
+  }
+
+  nav a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+
+  nav a:hover { color: var(--sage-dark); }
+
+  /* Hero */
+  .hero {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 6rem 2rem 4rem;
+    text-align: center;
+  }
+
+  .hero-eyebrow {
+    font-size: 0.85rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--sage-dark);
+    margin-bottom: 1.5rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: 1.5rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero p {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    max-width: 650px;
+    margin: 0 auto;
+    font-style: italic;
+    font-family: 'Lora', serif;
+  }
+
+  /* Section */
+  section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5rem 2rem;
+    border-top: 1px solid var(--soft-gray);
+  }
+
+  .section-number {
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    color: var(--sage-dark);
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+  }
+
+  .section-title {
+    font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+    margin-bottom: 1rem;
+  }
+
+  .section-intro {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    max-width: 700px;
+    margin-bottom: 3rem;
+    font-family: 'Lora', serif;
+    font-style: italic;
+  }
+
+  /* Cards */
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .card {
+    background: white;
+    padding: 2.5rem 2rem;
+    border-radius: 4px;
+    border: 1px solid var(--soft-gray);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(44, 62, 80, 0.08);
+  }
+
+  .card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+
+  .card p { color: var(--text-muted); font-size: 0.95rem; }
+
+  /* Color Palette */
+  .color-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .color-swatch {
+    border-radius: 4px;
+    overflow: hidden;
+    background: white;
+    border: 1px solid var(--soft-gray);
+  }
+
+  .color-box {
+    height: 140px;
+    display: flex;
+    align-items: flex-end;
+    padding: 1rem;
+    color: white;
+    font-size: 0.85rem;
+    font-weight: 500;
+  }
+
+  .color-info {
+    padding: 1rem 1.2rem;
+  }
+
+  .color-info strong {
+    display: block;
+    font-size: 0.95rem;
+    margin-bottom: 0.3rem;
+    color: var(--deep-slate);
+  }
+
+  .color-info span {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-family: monospace;
+  }
+
+  /* Typography */
+  .type-sample {
+    background: white;
+    padding: 3rem 2rem;
+    border-radius: 4px;
+    border: 1px solid var(--soft-gray);
+    margin-bottom: 1.5rem;
+  }
+
+  .type-sample h3 {
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--sage-dark);
+    margin-bottom: 1.5rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+  }
+
+  .type-display {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+
+  .type-body {
+    font-size: 1rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+  }
+
+  /* Do's and Don'ts */
+  .do-dont-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .do-box, .dont-box {
+    padding: 2rem;
+    border-radius: 4px;
+  }
+
+  .do-box {
+    background: var(--warm-beige);
+    border-left: 4px solid var(--sage-dark);
+  }
+
+  .dont-box {
+    background: #FDF6F3;
+    border-left: 4px solid #C97B63;
+  }
+
+  .do-box h3 { color: var(--sage-dark); margin-bottom: 1rem; }
+  .dont-box h3 { color: #A85A45; margin-bottom: 1rem; }
+
+  .do-box ul, .dont-box ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .do-box li, .dont-box li {
+    padding: 0.6rem 0;
+    padding-left: 1.8rem;
+    position: relative;
+    font-size: 0.95rem;
+    color: var(--text-dark);
+    border-bottom: 1px solid rgba(44, 62, 80, 0.08);
+  }
+
+  .do-box li:last-child, .dont-box li:last-child { border-bottom: none; }
+
+  .do-box li::before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    color: var(--sage-dark);
+    font-weight: 600;
+  }
+
+  .dont-box li::before {
+    content: "×";
+    position: absolute;
+    left: 0;
+    color: #A85A45;
+    font-weight: 600;
+  }
+
+  /* Comparison Table */
+  .comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+    background: white;
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid var(--soft-gray);
+  }
+
+  .comparison-table th {
+    background: var(--deep-slate);
+    color: white;
+    padding: 1.2rem;
+    text-align: left;
+    font-weight: 500;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+  }
+
+  .comparison-table td {
+    padding: 1.2rem;
+    border-bottom: 1px solid var(--soft-gray);
+    font-size: 0.95rem;
+    vertical-align: top;
+  }
+
+  .comparison-table tr:last-child td { border-bottom: none; }
+
+  .comparison-table td:first-child {
+    color: var(--text-muted);
+    font-style: italic;
+    background: #FAFAFA;
+  }
+
+  .comparison-table td:last-child {
+    color: var(--deep-slate);
+    font-weight: 500;
+  }
+
+  /* Quote Block */
+  .quote-block {
+    background: var(--warm-beige);
+    padding: 3rem;
+    border-radius: 4px;
+    margin: 2rem 0;
+    text-align: center;
+  }
+
+  .quote-block p {
+    font-family: 'Lora', serif;
+    font-style: italic;
+    font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+    color: var(--deep-slate);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.5;
+  }
+
+  .quote-block .attribution {
+    margin-top: 1.5rem;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--sage-dark);
+    font-style: normal;
+    font-family: 'Inter', sans-serif;
+  }
+
+  /* Logo Section */
+  .logo-display {
+    background: white;
+    padding: 4rem 2rem;
+    border-radius: 4px;
+    border: 1px solid var(--soft-gray);
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .logo-main {
+    font-family: 'Lora', serif;
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 600;
+    color: var(--deep-slate);
+    letter-spacing: -1px;
+    margin-bottom: 0.5rem;
+  }
+
+  .logo-main span { color: var(--sage-dark); font-style: italic; }
+
+  .logo-tagline {
+    font-size: 0.9rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-top: 1rem;
+  }
+
+  /* Footer */
+  footer {
+    background: var(--deep-slate);
+    color: var(--warm-beige);
+    padding: 4rem 2rem;
+    text-align: center;
+    margin-top: 4rem;
+  }
+
+  footer p {
+    font-family: 'Lora', serif;
+    font-style: italic;
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto 1rem;
+    opacity: 0.9;
+  }
+
+  footer .copyright {
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    opacity: 0.6;
+    margin-top: 2rem;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+  }
+
+  @media (max-width: 768px) {
+    nav ul { gap: 1rem; }
+    section { padding: 3rem 1.5rem; }
+    .hero { padding: 4rem 1.5rem 2rem; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="logo">Vantage<span> Solutions</span></div>
+    <nav>
+      <ul>
+        <li><a href="#filosofi">Filosofi</a></li>
+        <li><a href="#visual">Visual</a></li>
+        <li><a href="#nada">Nada Bicara</a></li>
+        <li><a href="#pesan">Pesan</a></li>
+        <li><a href="#panduan">Panduan</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="hero-eyebrow">Brand Guidelines</div>
+  <h1>Teknologi yang Mengabdi, Bukan Menguasai.</h1>
+  <p>Dokumen ini adalah panduan identitas Vantage Solutions — sebuah perusahaan yang hadir bukan untuk menjadi yang paling canggih, tetapi untuk menjadi alasan mengapa bisnis Anda bisa tumbuh lebih tenang, lebih sehat, dan lebih bermakna.</p>
+</div>
+
+<!-- SECTION 1: FILOSOFI -->
+<section id="filosofi">
+  <div class="section-number">01 — FILOSOFI</div>
+  <h2 class="section-title">The Humble Enabler</h2>
+  <p class="section-intro">Kami adalah tanah yang subur. Bukan gedung yang menjulang. Tanpa kami, bisnis Anda mungkin tetap berdiri — tetapi bersama kami, ia tumbuh lebih kokoh, lebih tenang, dan lebih jauh.</p>
+
+  <div class="card-grid">
+    <div class="card">
+      <h3>Brand Essence</h3>
+      <p>Kepedulian yang Kokoh (Sturdy Care). Kami percaya bahwa teknologi terbaik adalah teknologi yang tidak terlihat — yang bekerja dalam diam, membebaskan manusia untuk melakukan apa yang paling mereka cintai.</p>
+    </div>
+    <div class="card">
+      <h3>Brand Purpose</h3>
+      <p>Kami hadir untuk menjadi alasan mengapa bisnis Anda bisa tumbuh lebih sehat, tim Anda bisa bekerja lebih sejahtera, dan industri digital di sekitar kita bisa dibangun dengan fondasi yang memihak pada manusia.</p>
+    </div>
+    <div class="card">
+      <h3>Brand Promise</h3>
+      <p>Kami mengubah kekacauan data menjadi ketenangan pikiran, sehingga Anda memiliki waktu dan kejelasan untuk melihat serta meraih peluang bisnis yang jauh lebih besar.</p>
+    </div>
+  </div>
+
+  <div class="quote-block" style="margin-top: 3rem;">
+    <p>"Kami tidak hadir untuk menjadi perusahaan teknologi terbesar. Kami hadir untuk menjadi alasan mengapa bisnis Anda bisa melangkah lebih jauh."</p>
+    <div class="attribution">— Vantage Solutions</div>
+  </div>
+</section>
+
+<!-- SECTION 2: TAGLINE -->
+<section>
+  <div class="section-number">02 — TAGLINE</div>
+  <h2 class="section-title">Kata-kata yang Kami Pilih</h2>
+  <p class="section-intro">Tagline adalah janji singkat yang kami ucapkan setiap kali seseorang membaca nama kami. Ia harus terasa hangat, rendah hati, dan visioner — bukan sombong atau menakutkan.</p>
+
+  <div class="card-grid">
+    <div class="card">
+      <h3>Tagline Utama</h3>
+      <p style="font-family: 'Lora', serif; font-size: 1.3rem; color: var(--deep-slate); font-style: italic; margin-top: 1rem;">"Teknologi yang Mengabdi, Bukan Menguasai."</p>
+    </div>
+    <div class="card">
+      <h3>Alternatif 1</h3>
+      <p style="font-family: 'Lora', serif; font-size: 1.3rem; color: var(--deep-slate); font-style: italic; margin-top: 1rem;">"Fondasi Digital untuk Kemajuan Bersama."</p>
+    </div>
+    <div class="card">
+      <h3>Alternatif 2</h3>
+      <p style="font-family: 'Lora', serif; font-size: 1.3rem; color: var(--deep-slate); font-style: italic; margin-top: 1rem;">"Di Balik Setiap Langkah Maju Bisnis Anda."</p>
+    </div>
+    <div class="card">
+      <h3>Alternatif 3</h3>
+      <p style="font-family: 'Lora', serif; font-size: 1.3rem; color: var(--deep-slate); font-style: italic; margin-top: 1rem;">"Kami Merapikan Data, Agar Anda Bisa Fokus pada Manusia."</p>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 3: VISUAL IDENTITY -->
+<section id="visual">
+  <div class="section-number">03 — IDENTITAS VISUAL</div>
+  <h2 class="section-title">Rupa yang Mengayomi</h2>
+  <p class="section-intro">Visual kami tidak berteriak. Ia mengundang. Tidak memamerkan kecanggihan, tetapi menawarkan ketenangan. Setiap warna, huruf, dan ruang kosong dirancang untuk memberi napas.</p>
+
+  <h3 style="margin-top: 3rem; margin-bottom: 1rem;">Palet Warna</h3>
+  <div class="color-grid">
+    <div class="color-swatch">
+      <div class="color-box" style="background: #2C3E50; color: white;">#2C3E50</div>
+      <div class="color-info">
+        <strong>Deep Slate</strong>
+        <span>Warna utama — kepercayaan & fondasi kokoh</span>
+      </div>
+    </div>
+    <div class="color-swatch">
+      <div class="color-box" style="background: #8FAE8B; color: white;">#8FAE8B</div>
+      <div class="color-info">
+        <strong>Sage Green</strong>
+        <span>Aksen — pertumbuhan, ketenangan, keseimbangan</span>
+      </div>
+    </div>
+    <div class="color-swatch">
+      <div class="color-box" style="background: #F5EFE6; color: #2C3E50;">#F5EFE6</div>
+      <div class="color-info">
+        <strong>Warm Beige</strong>
+        <span>Latar — kehangatan & kemanusiaan</span>
+      </div>
+    </div>
+    <div class="color-swatch">
+      <div class="color-box" style="background: #FAF7F2; color: #2C3E50;">#FAF7F2</div>
+      <div class="color-info">
+        <strong>Cream</strong>
+        <span>Background utama — ruang napas & kejelasan</span>
+      </div>
+    </div>
+    <div class="color-swatch">
+      <div class="color-box" style="background: #C9A961; color: white;">#C9A961</div>
+      <div class="color-info">
+        <strong>Accent Gold</strong>
+        <span>Highlight — nilai, kualitas, sentuhan premium</span>
+      </div>
+    </div>
+  </div>
+
+  <h3 style="margin-top: 4rem; margin-bottom: 1rem;">Tipografi</h3>
+  <div class="type-sample">
+    <h3>Heading — Lora (Serif)</h3>
+    <div class="type-display" style="font-family: 'Lora', serif;">Fondasi yang tenang untuk bisnis yang tumbuh.</div>
+    <p class="type-body">Digunakan pada judul utama, tagline, dan kutipan. Memberikan sentuhan hangat, klasik, dan terpercaya. Hindari penggunaan huruf kapital seluruhnya.</p>
+  </div>
+  <div class="type-sample">
+    <h3>Body Text — Inter (Sans-Serif)</h3>
+    <div class="type-display" style="font-family: 'Inter', sans-serif; font-size: 1.3rem;">Kami membangun sistem yang bekerja dalam diam, agar Anda bisa bekerja dengan tenang.</div>
+    <p class="type-body">Digunakan pada seluruh teks isi, tombol, label, dan navigasi. Bersih, modern, dan sangat mudah dibaca dalam ukuran kecil maupun besar.</p>
+  </div>
+
+  <h3 style="margin-top: 4rem; margin-bottom: 1rem;">Logo</h3>
+  <div class="logo-display">
+    <div class="logo-main">Vantage<span>Solutions</span></div>
+    <div class="logo-tagline">Teknologi yang Mengabdi</div>
+  </div>
+  <div class="card-grid">
+    <div class="card">
+      <h3>Penggunaan yang Benar</h3>
+      <p>Gunakan logo dengan ruang napas minimal di sekelilingnya. Latar belakang harus netral (cream, beige, atau putih). Jangan ubah proporsi, warna, atau susunan huruf.</p>
+    </div>
+    <div class="card">
+      <h3>Penggunaan yang Dihindari</h3>
+      <p>Jangan letakkan di atas latar yang ramai. Jangan berikan efek bayangan berlebihan, gradien, atau outline. Jangan miringkan atau meregangkan logo.</p>
+    </div>
+  </div>
+
+  <h3 style="margin-top: 4rem; margin-bottom: 1rem;">Arah Visual (Imagery)</h3>
+  <div class="card-grid">
+    <div class="card">
+      <h3>Gunakan</h3>
+      <p>Tim yang berdiskusi dengan santai. Pemilik bisnis yang tersenyum lega melihat laporan. Metafora visual seperti akar pohon yang kuat, jembatan yang kokoh, atau tangan yang saling membantu. Ruang kosong yang lega.</p>
+    </div>
+    <div class="card">
+      <h3>Hindari</h3>
+      <p>Gambar server, kode biner, orang yang menatap layar dengan cahaya biru, ilustrasi teknologi abstrak yang membingungkan, atau visual yang terasa "dingin" dan korporat berlebihan.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 4: TONE OF VOICE -->
+<section id="nada">
+  <div class="section-number">04 — NADA BICARA</div>
+  <h2 class="section-title">Bagaimana Kami Berbicara</h2>
+  <p class="section-intro">Nada bicara kami adalah seorang mitra bisnis senior yang bijak — tenang, mendengar lebih banyak daripada berbicara, dan selalu menawarkan perspektif, bukan instruksi.</p>
+
+  <div class="card-grid">
+    <div class="card">
+      <h3>Menenangkan, Bukan Mendesak</h3>
+      <p>Hindari bahasa yang menciptakan rasa takut atau urgensi palsu. Tawarkan solusi dan kelegaan, bukan tekanan.</p>
+    </div>
+    <div class="card">
+      <h3>Meyakinkan, Bukan Menggurui</h3>
+      <p>Posisikan diri sebagai mitra yang memahami masalah mereka. Bukan sebagai ahli teknologi yang merasa paling pintar.</p>
+    </div>
+    <div class="card">
+      <h3>Visioner, Bukan Teknis</h3>
+      <p>Bicaralah tentang "waktu yang kembali", "keputusan yang lebih jernih", dan "visi masa depan". Bukan tentang API, ETL, atau pipeline.</p>
+    </div>
+    <div class="card">
+      <h3>Sederhana dan Lega</h3>
+      <p>Gunakan kalimat pendek, jelas, dan beri ruang napas. Setiap tulisan harus terasa seperti napas panjang setelah hari yang melelahkan.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 5: MESSAGING PILLARS -->
+<section id="pesan">
+  <div class="section-number">05 — PILAR PESAN</div>
+  <h2 class="section-title">Tiga Hal yang Selalu Kami Sampaikan</h2>
+  <p class="section-intro">Setiap konten, proposal, percakapan, dan halaman website harus berputar di sekitar tiga pilar ini. Jika sebuah pesan tidak menyentuh salah satunya, pertimbangkan untuk tidak mengucapkannya.</p>
+
+  <div class="card-grid">
+    <div class="card">
+      <h3>1. Kepedulian pada Manusia</h3>
+      <p>Teknologi kami tidak dirancang untuk menggantikan manusia, melainkan membebaskan mereka dari pekerjaan yang melelahkan dan tidak bermakna, sehingga mereka bisa kembali fokus pada hal yang membutuhkan hati dan kreativitas.</p>
+      <p style="margin-top: 1rem; font-style: italic; color: var(--sage-dark); font-family: 'Lora', serif;">"Kami merapikan data, agar Anda bisa fokus pada manusia."</p>
+    </div>
+    <div class="card">
+      <h3>2. Fondasi, Bukan Pamer Fitur</h3>
+      <p>Kami tidak tertarik menjual software canggih yang penuh fitur tapi membingungkan. Kami hanya membangun apa yang benar-benar Anda butuhkan untuk bertumbuh, selangkah demi selangkah, dengan pondasi yang kokoh.</p>
+      <p style="margin-top: 1rem; font-style: italic; color: var(--sage-dark); font-family: 'Lora', serif;">"Kami menjahit solusi sesuai ukuran bisnis Anda."</p>
+    </div>
+    <div class="card">
+      <h3>3. Kemitraan Jangka Panjang</h3>
+      <p>Kesuksesan kami bukan diukur dari berapa banyak proyek yang kami tutup, tetapi dari berapa lama bisnis Anda bertahan dan berkembang setelah menggunakan sistem kami. Kami ada di sini untuk jangka panjang.</p>
+      <p style="margin-top: 1rem; font-style: italic; color: var(--sage-dark); font-family: 'Lora', serif;">"Tumbuh bersama, bukan hanya berteknologi."</p>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 6: DO'S AND DON'TS -->
+<section id="panduan">
+  <div class="section-number">06 — PANDUAN PENULISAN</div>
+  <h2 class="section-title">Apa yang Harus dan Tidak Harus Dikatakan</h2>
+  <p class="section-intro">Perbedaan antara perusahaan teknologi biasa dan Vantage Solutions sering kali terletak pada pilihan kata. Berikut adalah panduan praktisnya.</p>
+
+  <div class="do-dont-grid">
+    <div class="do-box">
+      <h3>Gunakan</h3>
+      <ul>
+        <li>"Kami hadir untuk mendengarkan tantangan Anda."</li>
+        <li>"Kami menghargai apa yang sudah Anda bangun."</li>
+        <li>"Kami berharap sistem ini memberi Anda ketenangan pikiran."</li>
+        <li>"Kami hanya membangun apa yang benar-benar Anda butuhkan."</li>
+        <li>"Mari kita sesuaikan bersama."</li>
+        <li>"Fondasi yang kokoh untuk pertumbuhan jangka panjang."</li>
+        <li>"Kami mendampingi sampai tim Anda nyaman."</li>
+      </ul>
+    </div>
+    <div class="dont-box">
+      <h3>Hindari</h3>
+      <ul>
+        <li>"Kami adalah solusi IT #1 dengan AI terdepan."</li>
+        <li>"Tinggalkan sistem lama Anda, gunakan sistem kami."</li>
+        <li>"Tingkatkan profit Anda 300% dengan dashboard kami!"</li>
+        <li>"Fitur kami paling lengkap di pasaran."</li>
+        <li>"Transformasi digital sekarang atau tertinggal."</li>
+        <li>"Solusi all-in-one terbaik untuk bisnis modern."</li>
+        <li>Kata-kata seperti: disrupt, revolutionize, game-changer.</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3 style="margin-top: 4rem; margin-bottom: 1rem;">Transformasi Pesan</h3>
+  <table class="comparison-table">
+    <thead>
+      <tr>
+        <th style="width: 50%;">Pesan Biasa (Hindari)</th>
+        <th style="width: 50%;">Pesan Vantage Solutions (Gunakan)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>"Kami mengintegrasikan API marketplace ke database PostgreSQL menggunakan pipeline Python."</td>
+        <td>"Kami menyatukan data penjualan dari semua toko Anda ke dalam satu layar yang rapi, sehingga Anda bisa melihat peluang pertumbuhan tanpa menunggu laporan akhir bulan."</td>
+      </tr>
+      <tr>
+        <td>"Sistem kami akan mengotomatisasi workflow administratif Anda."</td>
+        <td>"Bebaskan tim Anda dari pekerjaan repetitif yang melelahkan. Biarkan mereka fokus pada hal yang benar-benar membesarkan bisnis Anda."</td>
+      </tr>
+      <tr>
+        <td>"Beli dashboard kami agar tidak ketinggalan data."</td>
+        <td>"Dapatkan ketenangan pikiran dengan memantau kesehatan bisnis Anda secara real-time, dari mana saja, kapan saja."</td>
+      </tr>
+      <tr>
+        <td>"Kami adalah vendor software engineering dan data integration."</td>
+        <td>"Kami adalah mitra yang membantu Anda membangun fondasi data yang tenang dan kuat, agar Anda bisa melangkah lebih jauh."</td>
+      </tr>
+      <tr>
+        <td>"Transformasi digital sekarang atau bisnis Anda akan tertinggal."</td>
+        <td>"Ketika waktunya tepat, kami akan ada di sana untuk membantu Anda melangkah — dengan ritme yang nyaman untuk tim Anda."</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- SECTION 7: CONTOH PENERAPAN -->
+<section>
+  <div class="section-number">07 — CONTOH PENERAPAN</div>
+  <h2 class="section-title">Bagaimana Branding Ini Terasa</h2>
+  <p class="section-intro">Berikut adalah contoh nyata bagaimana filosofi ini diterjemahkan ke dalam kalimat yang akan Anda gunakan di website, proposal, dan percakapan sehari-hari.</p>
+
+  <div class="card-grid">
+    <div class="card">
+      <h3>Halaman Tentang Kami</h3>
+      <p style="font-family: 'Lora', serif; font-style: italic; font-size: 0.95rem; color: var(--text-muted);">"Banyak perusahaan teknologi berfokus pada seberapa canggih kode yang mereka tulis. Di Vantage Solutions, kami berfokus pada seberapa lega perasaan Anda ketika sistem berjalan. Kami percaya bahwa transformasi digital yang sejati bukan tentang mengganti manusia dengan mesin, tetapi tentang memberi manusia waktu dan ruang untuk melakukan apa yang paling mereka cintai."</p>
+    </div>
+    <div class="card">
+      <h3>Pembuka Proposal</h3>
+      <p style="font-family: 'Lora', serif; font-style: italic; font-size: 0.95rem; color: var(--text-muted);">"Proposal ini bukan sekadar daftar harga. Ini adalah komitmen kami untuk memastikan tim Anda tidak lagi terjebak dalam pekerjaan administratif yang melelahkan, mulai dari bulan depan."</p>
+    </div>
+    <div class="card">
+      <h3>Penutup Studi Kasus</h3>
+      <p style="font-family: 'Lora', serif; font-style: italic; font-size: 0.95rem; color: var(--text-muted);">"Dulu, Pak Andi menghabiskan 3 hari setiap akhir bulan hanya untuk merekap stok. Hari ini, ia menghabiskan 3 menit untuk melihat dashboard, dan 3 hari sisanya ia gunakan untuk merencanakan pembukaan cabang baru."</p>
+    </div>
+    <div class="card">
+      <h3>Serah Terima Proyek</h3>
+      <p style="font-family: 'Lora', serif; font-style: italic; font-size: 0.95rem; color: var(--text-muted);">"Kami tidak akan meninggalkan Anda setelah sistem jadi. Kami dampingi sampai tim Anda benar-benar nyaman — karena bagi kami, proyek baru selesai ketika Anda bisa tidur nyenyak."</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>"Kami tidak hadir untuk menjadi yang terbesar. Kami hadir untuk menjadi alasan mengapa bisnis Anda bisa melangkah lebih jauh."</p>
+  <div class="copyright">Vantage Solutions — Brand Guidelines — 2026</div>
+</footer>
+
+</body>
+</html>

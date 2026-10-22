@@ -1,0 +1,72 @@
+<div class="aurora-container">
+  <div class="aurora-layer layer-1"></div>
+  <div class="aurora-layer layer-2"></div>
+  <div class="aurora-layer layer-3"></div>
+</div>
+
+<style>
+.aurora-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.aurora-layer {
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  opacity: 0.3;
+  filter: blur(60px);
+}
+
+.layer-1 {
+  background: linear-gradient(
+    45deg,
+    transparent 30%,
+    rgba(123, 168, 145, 0.4) 50%,
+    transparent 70%
+  );
+  animation: aurora1 15s ease-in-out infinite;
+}
+
+.layer-2 {
+  background: linear-gradient(
+    135deg,
+    transparent 30%,
+    rgba(201, 169, 97, 0.3) 50%,
+    transparent 70%
+  );
+  animation: aurora2 20s ease-in-out infinite;
+}
+
+.layer-3 {
+  background: linear-gradient(
+    225deg,
+    transparent 30%,
+    rgba(143, 174, 139, 0.35) 50%,
+    transparent 70%
+  );
+  animation: aurora3 18s ease-in-out infinite;
+}
+
+@keyframes aurora1 {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(10%, 5%) rotate(5deg); }
+}
+
+@keyframes aurora2 {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(-8%, 8%) rotate(-3deg); }
+}
+
+@keyframes aurora3 {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(5%, -10%) rotate(4deg); }
+}
+</style>

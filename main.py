@@ -8,22 +8,26 @@ PRODUCTS = {
         'category': 'Marine',
         'image': 'seachariot_1.jpg',
         'gallery': ['seachariot_1.jpg', 'seachariot_2.jpg'],
-        'tagline': 'Highly Maneuverable Commercial & Military Submersible (Max Depth: 20m)',
+        'tagline': 'Highly Maneuverable Underwater Vehicle (Max Depth: 20m; Deeper Versions Available)',
         'description': (
-            'The SEA CHARIOT L380 is a highly maneuverable underwater vehicle suitable for commercial, '
-            'military, and recreational tasks such as wreck hunting, photography, and marine biology. '
-            'Designed to carry three people (two divers and one pilot) for an operational period of about '
-            'three hours, it also offers an excellent stable platform for motion picture photography. '
-            'The craft comes complete with an on-board air supply, depth gauge, and emergency buoyancy system.'
+            'The SEA CHARIOT L380 is an underwater vehicle for recreational, commercial, and military tasks '
+            'to a maximum depth of 20 meters, with deeper versions available on request. Applications include '
+            'wreck exploration, photography, archaeology, fish farming, coral restoration, and marine biology. '
+            'It carries three people (two divers and a diver-pilot) for about five hours, or two people with '
+            'large-format photography equipment. Four 500-watt BLDC thrusters are powered by a 36V 200Ah '
+            'lithium battery bank in a deep-water waterproof housing. An Arduino CPU assists the diver-pilot. '
+            'The stable platform is suited to motion-picture and regular video photography. The craft includes '
+            'an onboard 60-liter air bank, air-content and depth gauges, and a surface flotation system.'
         ),
         'specs': {
             'Mechanical Specifications': [
-                ('Operational Depth', '20 meters'),
-                ('Capacity', '3 people (2 divers, 1 pilot) or 2 people + equipment'),
-                ('Speed', '3 knots typical'),
-                ('Buoyancy', 'Typically neutral with independent airbags for emergency ascent'),
-                ('Construction', 'Reinforced fiberglass, 316 Stainless Steel, hard black anodized aluminium'),
-                ('Colour Options', 'Graphite Black (RAL 9011) or Sulfur Yellow (RAL 1016)'),
+                ('Maximum Operational Depth', '20 meters; deeper versions available on request'),
+                ('Capacity', '3 people (2 divers and 1 diver-pilot), or 2 people plus large-format photography equipment'),
+                ('Underwater Speed', '3 knots typical'),
+                ('Buoyancy', 'Typically neutral with independent airbags for buoyancy control or assisted ascent'),
+                ('Air Supply', 'Onboard 60-liter air bank: 4 x 15-liter, 200-bar aluminium tanks'),
+                ('Construction', 'Reinforced fiberglass, 316 and 304 stainless steel, hard black anodized aluminium, epoxy finish'),
+                ('Colour', 'Sulfur Yellow (RAL 1016)'),
                 ('Environment', 'Military or Commercial')
             ],
             'Dimensions & Weight': [
@@ -31,33 +35,35 @@ PRODUCTS = {
                 ('Maximum Height', '0.7 meters'),
                 ('Max Width (fins extended)', '1.80 meters'),
                 ('Max Width (fins retracted)', '1.10 meters'),
-                ('Weight in Air', 'Typically 250 Kg'),
-                ('Air Supply', '4 x 15lt 200BAR tanks')
+                ('Net Weight in Air', 'Typically 300 kg')
             ],
-            'Electrical & Propulsion': [
-                ('Operation Control', 'Spring loaded button switch Joy Stick'),
-                ('Power Source', '36v 200ampH Lithium Battery Bank with full BMS protection (waterproof)'),
-                ('Recharge Time', 'Less than 3 hours'),
-                ('Operational Duration', '5 hours (at 3 knots) or 2 hours (at 4 knots)')
+            'Electrical Specifications': [
+                ('Propulsion', '4 x 500-watt BLDC thrusters'),
+                ('Operation Controls', 'Waterproof joystick and foot controls'),
+                ('Electronics', 'Arduino CPU and digital monitor for battery status, craft depth, and air status'),
+                ('Power Source', '36V 200Ah lithium battery bank with BMS protection in a deep-water waterproof housing'),
+                ('Recharge Time', '3 hours typical'),
+                ('Operational Duration', '4.5 hours at 3 knots; 2 hours at 4 knots, subject to current conditions')
             ]
         },
         'standard_supply': [
-            'Sea Chariot with 36v 200ampH Lithium Battery & BMS protection',
-            'Depth Gauge & Compass',
+            'Sea Chariot L380 with 36V 200Ah lithium battery and BMS protection',
+            'Arduino CPU, digital depth gauge, and compass',
             'Battery Status Indicators',
-            '3 Air Cylinders and Contents Gauges',
+            '4 x 15-liter air cylinders with individual contents gauges',
+            'Heavy-duty battery charger',
             'Operator Manual',
             'Transportation Dolly'
         ],
         'extras': [
-            'Transportation Trailer',
-            'Underwater Lighting',
-            'Underwater Night Vision',
-            'Forward Looking Sonar',
-            'GPS & Navigation Modules',
+            'Shearwater SCUBA cylinder contents monitoring system',
+            'Underwater LED lighting for photography',
+            'Underwater night vision systems',
+            'Forward Looking Sonar (subject to export regulations)',
+            'Global Positioning Systems',
             'Navigation Lights',
-            'Underwater Communications',
-            'Special Custom Configurations (available upon consultation)'
+            'Personal underwater communications',
+            'Transportation trailer for 20ft container'
         ]
     },
     'sea-chariot-mk3': {
@@ -303,17 +309,180 @@ PRODUCTS = {
             'Secured Eyeguard'
         ]
     },
+    'night-fly-m200hs': {
+        'name': 'NIGHT FLY M-200HS',
+        'category': 'Electro-Optics',
+        'image': 'nightflym200hs_1.jpg',
+        'gallery': ['nightflym200hs_1.jpg'],
+        'tagline': 'High-Power Infrared LED Beacon for Tactical and Rescue Marking',
+        'description': (
+            'The NIGHT FLY M-200HS is a powerful infrared LED beacon for military forces, law enforcement, '
+            'and Coast Guards. It is invisible to the naked eye and requires a night vision system with an '
+            'image intensifier to be seen. Applications include marking helicopter landing zones, fixed-wing '
+            'airstrips, airborne drop zones, logistical supply zones, beachheads, harbour entrances, and '
+            'other marine target areas, as well as undercover operations and vehicle tagging. Special LED '
+            'or laser-diode versions can be tailored for ground, underwater, or airborne applications.'
+        ),
+        'specs': {
+            'Mechanical Specifications': [
+                ('Maximum Height', '111mm'),
+                ('Maximum Diameter', '57mm'),
+                ('Weight', 'Typically 305g with standard batteries'),
+                ('Construction', 'High-impact black Delrin or to client request'),
+                ('Environment', 'MIL SPEC'),
+                ('Immersion', '1m for 1 hour; greater depths available on request')
+            ],
+            'Illumination Specifications': [
+                ('Source', 'Solid-state LED'),
+                ('Output', '820 to 830nm peak intensity'),
+                ('Power Dissipation', '20mW to 160mW'),
+                ('Peak Output', '3.0mW at 830nm typical'),
+                ('Standard Flash Rate', '30ppm'),
+                ('Ground-to-Ground Range', 'Typically 1km with 1 night vision system'),
+                ('Air-to-Ground Range', 'Typically 3km with 1 night vision system')
+            ],
+            'Electrical Specifications': [
+                ('External Control', 'On-off toggle switch with sealed silicone boot'),
+                ('Power Source', '2 x 9.0V alkaline manganese batteries, type MN1604 or equivalent (IEC 6LR61)'),
+                ('NATO Stock Number', 'Y3-6135-99-634-8080'),
+                ('Operational Duration', 'Approximately 36 hours')
+            ]
+        },
+        'standard_supply': [
+            'Plastic transportation case',
+            'Instruction leaflet'
+        ],
+        'extras': [
+            'Custom LED or laser-diode configurations for ground, underwater, or airborne applications'
+        ]
+    },
+    'uw-night-fly': {
+        'name': 'UW-NIGHT FLY',
+        'category': 'Electro-Optics',
+        'image': 'uwnightfly_1.jpg',
+        'gallery': ['uwnightfly_1.jpg'],
+        'tagline': 'Underwater Infrared Personal Marker (Operational Depth: 30m)',
+        'description': (
+            'The UW-NIGHT FLY is designed for underwater and above-water applications, primarily as a personal '
+            'marker attached to diving-equipment webbing. It can also be mounted at a fixed location above or '
+            'below water to guide divers into a target area. Three individual LEDs flash at typically 30 pulses '
+            'per second for up to 18 hours, depending on battery type. The marker is invisible to the naked eye '
+            'and is intended for use with a night vision system. A protected on-off toggle switch operates the unit.'
+        ),
+        'specs': {
+            'Mechanical Specifications': [
+                ('Maximum Height', '140mm'),
+                ('Maximum Width', '58mm'),
+                ('Weight', '180g including battery'),
+                ('Construction', 'Black Delrin (Zellamiade)'),
+                ('Mount', '25 x 20mm diameter pin'),
+                ('Operational Depth', '30 meters')
+            ],
+            'Illumination Specifications': [
+                ('Source', 'Solid-state LED; three individual LEDs'),
+                ('Output', '820 to 830nm peak intensity'),
+                ('Peak Output', '3.0mW at 830nm typical'),
+                ('Standard Flash Rate', '30pps; other rates available on request'),
+                ('Ground-to-Ground Range', 'Approximately 1km with 1 night vision system'),
+                ('Air-to-Ground Range', 'Approximately 3km with 1 night vision system')
+            ],
+            'Electrical Specifications': [
+                ('External Control', 'On-off toggle switch with silicone switch rubber boot conforming to MIL-B-5423'),
+                ('Toggle Switch Life', '100,000 actuations'),
+                ('Rubber Boot Life', 'Minimum 50,000 actuations'),
+                ('Power Source', '9.0V alkaline manganese battery, type MN1604 or equivalent (IEC 6LR61)'),
+                ('NATO Stock Number', 'Y3-6135-99-634-8080'),
+                ('Operational Duration', 'Approximately 18 hours, subject to battery type')
+            ]
+        },
+        'standard_supply': [
+            'Plastic case',
+            'One MN1604 battery'
+        ],
+        'extras': [
+            'Directional cap',
+            'Mounting stake',
+            'Soft carrying bag'
+        ]
+    },
+    'night-seeker-m640': {
+        'name': 'NIGHT SEEKER M-640',
+        'category': 'Electro-Optics',
+        'image': 'nightseekerm640_1.png',
+        'gallery': ['nightseekerm640_1.png', 'nightseekerm640_2.png'],
+        'tagline': 'Rugged 640 x 480 Cooled Thermal Night Vision Camera System',
+        'description': (
+            'The NIGHT SEEKER M-640 is a rugged thermal camera system for military and paramilitary surveillance '
+            'in airborne, ground, and naval applications. It supports day and night operation, including hazy or '
+            'misty conditions, and uses a 640 x 480 InSb focal plane array. The camera can be controlled through '
+            'a communications protocol or discrete signals, locally or remotely using the Remote Control Unit. '
+            'A 2x or 2.5x onboard digital zoom is standard; an optional 2.5x optical doubler/expander is available.'
+        ),
+        'specs': {
+            'Mechanical Specifications': [
+                ('Overall Length', '390mm'),
+                ('Maximum Height', '170mm'),
+                ('Maximum Width', '150mm'),
+                ('Weight', '5.5kg'),
+                ('Construction', 'Aluminium, hard black anodized with gloss white epoxy finish'),
+                ('Environment', 'MIL SPEC according to MIL-STD-810 and MIL-STD-461'),
+                ('Operating Temperature', '-32°C to +64°C'),
+                ('Noise Level', 'Inaudible at 25m'),
+                ('Mounting', '1/4-inch Whitworth'),
+                ('Hardpoint', 'Available as an optional extra')
+            ],
+            'Optical Specifications': [
+                ('Objective Lens', '22 to 275mm F/5.5 continuous zoom'),
+                ('Horizontal Field of View', '25° to 2°'),
+                ('Vertical Field of View', '18.75° to 1.5°'),
+                ('Focus', '5m to infinity'),
+                ('Digital Zoom', '2x or 2.5x onboard, standard'),
+                ('Optical Doubler/Expander', '2.5x available as an optional extra')
+            ],
+            'Electrical Specifications': [
+                ('Focal Plane Array', 'InSb'),
+                ('Spectral Range', '3 to 5 microns'),
+                ('Number of Pixels', '640 x 480'),
+                ('NETD', '≤20mK at ambient temperature'),
+                ('Cooling', 'Micro Stirling engine'),
+                ('Noise Level', 'Inaudible at 50m'),
+                ('Frame Rate', '60Hz'),
+                ('Analog Video Output', 'CCIR or RS-170'),
+                ('Digital Video Output', '14-bit RS422 or LVDS'),
+                ('External Connection', '13-pin Amphenol connector from Remote Control Unit'),
+                ('External Controls', 'On/off toggle, focus momentary switch, digital zoom momentary switch, NUC momentary switch, video polarity momentary switch'),
+                ('Camera Power Source', '28V DC standard or optional 12V DC, derived from mains input in Remote Control Unit'),
+                ('Consumption', '35W maximum'),
+                ('Mains Power Input', '90 to 230V AC')
+            ]
+        },
+        'standard_supply': [
+            'Remote Control Unit with cables',
+            'Hard-shell carrying case',
+            'Operator’s manual'
+        ],
+        'extras': [
+            'Onboard digital compass',
+            'Global Positioning Systems',
+            'Video tracking software',
+            'Gimbals',
+            'Solid-state laser rangefinder',
+            'Soft carrying bag',
+            '2.5x optical doubler/expander',
+            'Hardpoint'
+        ]
+    },
     'night-seeker-mod-45135t': {
         'name': 'NIGHT SEEKER Mod-45135T',
         'category': 'Electro-Optics',
         'image': 'nightseekermod_1.jpg',
-        'gallery': ['nightseekermod_1.jpg', 'nightseekermod_2.jpeg'],
+        'gallery': ['nightseekermod_1.jpg', 'nightseekermod_.jpeg'],
         'tagline': 'Rugged Day/Night Thermal Observation System',
         'description': (
             'The NIGHT SEEKER Mod-45135T is a rugged Observation System (OS) designed for short to '
             'medium distances. Suitable for both Day and Night operations, it performs exceptionally '
             'well even under hazy or misty conditions. The system features a high-performance un-cooled '
-            '8 to 14 micron microbolometer detector and a 45 to 135mm Germanium Objective Lens housed '
+            '8 to 12 micron microbolometer detector and a 45 to 135mm Germanium Objective Lens housed '
             'in a water-resistant aluminium casing.'
         ),
         'specs': {
@@ -337,7 +506,7 @@ PRODUCTS = {
             ],
             'Electrical Specifications': [
                 ('Detector', '25µm pitch Microbolometer'),
-                ('Spectral Range', '8 to 14 microns'),
+                ('Spectral Range', '8 to 12 microns'),
                 ('Number of Pixels', '384 x 288 / 320 x 240'),
                 ('Frame Rate', '50Hz (60Hz for 320 x 240)'),
                 ('Analog Video Output', 'CCIR or RS-170'),

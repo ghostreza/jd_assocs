@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vantage Solutions — Brand Manifesto</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --slate: #1a2332;
+    --sage: #7BA891;
+    --sage-light: #A8C5B8;
+    --beige: #F5EFE6;
+    --cream: #FAF7F2;
+    --warm-gray: #E8E4DC;
+    --text: #2C3E50;
+    --text-light: #6B7280;
+    --accent: #C9A961;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+  }
+
+  /* --- Modern Background Elements --- */
+  .bg-orb {
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.3;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .orb-1 {
+    width: 500px;
+    height: 500px;
+    background: var(--sage);
+    top: -200px;
+    right: -200px;
+    animation: float 20s ease-in-out infinite;
+  }
+
+  .orb-2 {
+    width: 400px;
+    height: 400px;
+    background: var(--accent);
+    bottom: 10%;
+    left: -150px;
+    animation: float 25s ease-in-out infinite reverse;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(30px, 30px); }
+  }
+
+  /* --- Navigation --- */
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(250, 247, 242, 0.8);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(232, 228, 220, 0.5);
+    padding: 1.2rem 2rem;
+  }
+
+  .nav-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-logo {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--slate);
+    letter-spacing: -0.5px;
+  }
+
+  .nav-logo span {
+    color: var(--sage);
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+
+  .nav-links a:hover {
+    color: var(--sage);
+  }
+
+  /* --- Hero Section --- */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8rem 2rem 4rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-content {
+    max-width: 1200px;
+    text-align: center;
+  }
+
+  .hero-badge {
+    display: inline-block;
+    background: rgba(123, 168, 145, 0.1);
+    border: 1px solid rgba(123, 168, 145, 0.3);
+    padding: 0.5rem 1.5rem;
+    border-radius: 100px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--sage);
+    margin-bottom: 2rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.5rem, 7vw, 5.5rem);
+    margin-bottom: 2rem;
+    background: linear-gradient(135deg, var(--slate) 0%, var(--sage) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero-subtitle {
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
+    color: var(--text-light);
+    max-width: 700px;
+    margin: 0 auto 3rem;
+    font-weight: 400;
+    line-height: 1.6;
+  }
+
+  .hero-cta {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    padding: 1rem 2.5rem;
+    border-radius: 100px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s;
+    cursor: pointer;
+    border: none;
+  }
+
+  .btn-primary {
+    background: var(--slate);
+    color: var(--cream);
+  }
+
+  .btn-primary:hover {
+    background: var(--sage);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(123, 168, 145, 0.3);
+  }
+
+  .btn-secondary {
+    background: transparent;
+    color: var(--slate);
+    border: 2px solid var(--warm-gray);
+  }
+
+  .btn-secondary:hover {
+    border-color: var(--sage);
+    color: var(--sage);
+  }
+
+  /* --- Section Base --- */
+  section {
+    padding: 8rem 2rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 5rem;
+  }
+
+  .section-tag {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--sage);
+    margin-bottom: 1rem;
+  }
+
+  .section-title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: 1.5rem;
+    color: var(--slate);
+  }
+
+  .section-desc {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  /* --- Manifesto Section --- */
+  .manifesto {
+    background: var(--slate);
+    color: var(--cream);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .manifesto::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 30% 50%, rgba(123, 168, 145, 0.15) 0%, transparent 50%);
+  }
+
+  .manifesto-content {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .manifesto-text {
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    line-height: 1.6;
+    font-weight: 400;
+    margin-bottom: 2rem;
+  }
+
+  .manifesto-text .highlight {
+    color: var(--sage-light);
+    font-weight: 600;
+  }
+
+  /* --- Contrast Cards --- */
+  .contrast-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .contrast-card {
+    background: white;
+    border-radius: 16px;
+    padding: 3rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s;
+    border: 1px solid var(--warm-gray);
+  }
+
+  .contrast-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  }
+
+  .contrast-card.old {
+    border-left: 4px solid #C97B63;
+  }
+
+  .contrast-card.new {
+    border-left: 4px solid var(--sage);
+    background: linear-gradient(135deg, white 0%, rgba(123, 168, 145, 0.05) 100%);
+  }
+
+  .contrast-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: var(--slate);
+  }
+
+  .contrast-card ul {
+    list-style: none;
+  }
+
+  .contrast-card li {
+    padding: 1rem 0;
+    padding-left: 2rem;
+    position: relative;
+    color: var(--text-light);
+    border-bottom: 1px solid var(--warm-gray);
+    font-size: 0.95rem;
+  }
+
+  .contrast-card li:last-child {
+    border-bottom: none;
+  }
+
+  .contrast-card.old li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: #C97B63;
+    font-weight: 700;
+    font-size: 1.2rem;
+  }
+
+  .contrast-card.new li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--sage);
+    font-weight: 700;
+    font-size: 1.2rem;
+  }
+
+  /* --- Pillars Section --- */
+  .pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .pillar-card {
+    background: white;
+    border-radius: 16px;
+    padding: 3rem 2rem;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s;
+    border: 1px solid var(--warm-gray);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .pillar-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--sage) 0%, var(--accent) 100%);
+    transform: scaleX(0);
+    transition: transform 0.3s;
+  }
+
+  .pillar-card:hover::before {
+    transform: scaleX(1);
+  }
+
+  .pillar-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  }
+
+  .pillar-number {
+    font-family: 'Manrope', sans-serif;
+    font-size: 4rem;
+    font-weight: 800;
+    color: var(--sage);
+    opacity: 0.2;
+    margin-bottom: 1rem;
+    line-height: 1;
+  }
+
+  .pillar-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: var(--slate);
+  }
+
+  .pillar-card p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  /* --- Voice Section --- */
+  .voice-grid {
+    display: grid;
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .voice-comparison {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    background: white;
+    border-radius: 16px;
+    padding: 2.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--warm-gray);
+  }
+
+  .voice-bad {
+    background: #FAFAFA;
+    padding: 2rem;
+    border-radius: 12px;
+    border: 2px dashed #DDD;
+  }
+
+  .voice-good {
+    background: linear-gradient(135deg, var(--slate) 0%, #2C3E50 100%);
+    color: var(--cream);
+    padding: 2rem;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .voice-good::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(123, 168, 145, 0.1) 0%, transparent 70%);
+  }
+
+  .voice-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+
+  .voice-bad .voice-label {
+    color: #999;
+  }
+
+  .voice-good .voice-label {
+    color: var(--sage-light);
+    position: relative;
+    z-index: 1;
+  }
+
+  .voice-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    position: relative;
+    z-index: 1;
+  }
+
+  .voice-bad .voice-text {
+    color: #888;
+    font-style: italic;
+  }
+
+  .voice-good .voice-text {
+    font-weight: 500;
+  }
+
+  /* --- Color Palette --- */
+  .color-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+
+  .color-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--warm-gray);
+    transition: all 0.3s;
+  }
+
+  .color-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  }
+
+  .color-preview {
+    height: 150px;
+    display: flex;
+    align-items: flex-end;
+    padding: 1rem;
+    color: white;
+    font-size: 0.85rem;
+    font-weight: 600;
+    font-family: 'Manrope', sans-serif;
+  }
+
+  .color-info {
+    padding: 1.5rem;
+  }
+
+  .color-info strong {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+    color: var(--slate);
+    font-family: 'Manrope', sans-serif;
+  }
+
+  .color-info span {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    font-family: monospace;
+  }
+
+  /* --- Footer --- */
+  footer {
+    background: var(--slate);
+    color: var(--cream);
+    padding: 6rem 2rem 3rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 50% 0%, rgba(123, 168, 145, 0.1) 0%, transparent 50%);
+  }
+
+  .footer-content {
+    position: relative;
+    z-index: 1;
+  }
+
+  .footer-logo {
+    font-family: 'Manrope', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    letter-spacing: -1px;
+  }
+
+  .footer-logo span {
+    color: var(--sage);
+  }
+
+  .footer-tagline {
+    font-size: 1.1rem;
+    opacity: 0.8;
+    margin-bottom: 3rem;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .footer-bottom {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.8rem;
+    opacity: 0.5;
+    letter-spacing: 1px;
+  }
+
+  /* --- Responsive --- */
+  @media (max-width: 768px) {
+    nav { padding: 1rem; }
+    .nav-links { display: none; }
+    section { padding: 5rem 1.5rem; }
+    .contrast-grid, .voice-comparison { grid-template-columns: 1fr; }
+    .hero { padding: 6rem 1.5rem 3rem; }
+  }
+
+  /* --- Animations --- */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-on-scroll {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+</style>
+</head>
+<body>
+
+<!-- Background Orbs -->
+<div class="bg-orb orb-1"></div>
+<div class="bg-orb orb-2"></div>
+
+<!-- Navigation -->
+<nav>
+  <div class="nav-inner">
+    <div class="nav-logo">Vantage<span>.</span></div>
+    <ul class="nav-links">
+      <li><a href="#manifesto">Manifesto</a></li>
+      <li><a href="#contrast">Perubahan</a></li>
+      <li><a href="#pillars">Pondasi</a></li>
+      <li><a href="#voice">Suara</a></li>
+      <li><a href="#colors">Visual</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-badge">Brand Manifesto 2026</div>
+    <h1>Kami tidak berteriak.<br>Kami mendengarkan.</h1>
+    <p class="hero-subtitle">Di tengah kebisingan industri teknologi yang menjanjikan revolusi, Vantage Solutions memilih jalan yang berbeda. Menjadi fondasi yang tenang, agar bisnis Anda bisa tumbuh dengan leluasa.</p>
+    <div class="hero-cta">
+      <a href="#manifesto" class="btn btn-primary">Baca Manifesto</a>
+      <a href="#pillars" class="btn btn-secondary">Lihat Pondasi Kami</a>
+    </div>
+  </div>
+</section>
+
+<!-- Manifesto Section -->
+<section class="manifesto" id="manifesto">
+  <div class="manifesto-content">
+    <div class="section-tag" style="color: var(--sage-light);">Our Belief</div>
+    <div class="manifesto-text">
+      Banyak perusahaan teknologi berfokus pada seberapa canggih kode yang mereka tulis.
+      <br><br>
+      Di Vantage Solutions, kami berfokus pada <span class="highlight">seberapa lega perasaan Anda</span> ketika sistem berjalan.
+      <br><br>
+      Kami percaya transformasi digital bukan tentang mengganti manusia dengan mesin, tetapi tentang memberi manusia <span class="highlight">waktu dan ruang</span> untuk melakukan apa yang paling mereka cintai dari bisnis mereka.
+    </div>
+  </div>
+</section>
+
+<!-- Contrast Section -->
+<section id="contrast">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">The Shift</div>
+      <h2 class="section-title">Perubahan yang Kami Bawa</h2>
+      <p class="section-desc">Kami tidak menjual fitur. Kami menjual peralihan dari kekacauan menuju ketenangan.</p>
+    </div>
+
+    <div class="contrast-grid">
+      <div class="contrast-card old">
+        <h3>Cara Lama</h3>
+        <ul>
+          <li>Membeli software mahal yang kaku dan memaksa ganti sistem</li>
+          <li>Staf menghabiskan 70% waktu untuk copy-paste Excel</li>
+          <li>Data terpencar, laporan terlambat, keputusan tertunda</li>
+          <li>Vendor datang, memasang, lalu menghilang</li>
+          <li>Bahasa teknis yang membingungkan dan mengintimidasi</li>
+        </ul>
+      </div>
+
+      <div class="contrast-card new">
+        <h3>Cara Vantage</h3>
+        <ul>
+          <li>Menjembatani sistem lama Anda tanpa mengganggu operasional</li>
+          <li>Otomatisasi pekerjaan repetitif, membebaskan waktu tim</li>
+          <li>Satu dashboard terpusat untuk keputusan yang jernih</li>
+          <li>Mendampingi hingga tim Anda benar-benar nyaman dan mahir</li>
+          <li>Berbicara dalam bahasa bisnis: waktu, ketenangan, dan pertumbuhan</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Pillars Section -->
+<section id="pillars" style="background: var(--beige);">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Our Foundation</div>
+      <h2 class="section-title">Tiga Pondasi Kami</h2>
+      <p class="section-desc">Setiap keputusan, setiap kode, setiap percakapan dibangun di atas tiga pilar ini.</p>
+    </div>
+
+    <div class="pillars-grid">
+      <div class="pillar-card">
+        <div class="pillar-number">01</div>
+        <h3>Kepedulian pada Manusia</h3>
+        <p>Teknologi kami dirancang untuk melayani, bukan menguasai. Kami menghilangkan beban administratif agar tim Anda bisa fokus pada hal yang membutuhkan hati dan kreativitas.</p>
+      </div>
+
+      <div class="pillar-card">
+        <div class="pillar-number">02</div>
+        <h3>Fondasi, Bukan Pamer Fitur</h3>
+        <p>Kami tidak tertarik pada software yang penuh fitur tapi membingungkan. Kami hanya membangun apa yang benar-benar Anda butuhkan untuk bertumbuh, selangkah demi selangkah.</p>
+      </div>
+
+      <div class="pillar-card">
+        <div class="pillar-number">03</div>
+        <h3>Kemitraan Jangka Panjang</h3>
+        <p>Kesuksesan kami diukur dari berapa lama bisnis Anda bertahan dan berkembang setelah menggunakan sistem kami. Kami ada di sini untuk jangka panjang, bukan transaksi cepat.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Voice Section -->
+<section id="voice">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Our Voice</div>
+      <h2 class="section-title">Bagaimana Kami Berbicara</h2>
+      <p class="section-desc">Nada bicara kami adalah seorang mitra bisnis senior yang bijak — tenang, mendengar lebih banyak daripada berbicara.</p>
+    </div>
+
+    <div class="voice-grid">
+      <div class="voice-comparison">
+        <div class="voice-bad">
+          <div class="voice-label">Jangan Gunakan</div>
+          <div class="voice-text">"Kami mengintegrasikan API marketplace ke database PostgreSQL menggunakan pipeline Python untuk optimalisasi ETL."</div>
+        </div>
+        <div class="voice-good">
+          <div class="voice-label">Gunakan Ini</div>
+          <div class="voice-text">"Kami menyatukan data penjualan dari semua toko Anda ke dalam satu layar yang rapi, agar Anda bisa melihat peluang tanpa menunggu laporan akhir bulan."</div>
+        </div>
+      </div>
+
+      <div class="voice-comparison">
+        <div class="voice-bad">
+          <div class="voice-label">Jangan Gunakan</div>
+          <div class="voice-text">"Tingkatkan profit Anda 300% dengan dashboard AI kami yang paling canggih di pasaran!"</div>
+        </div>
+        <div class="voice-good">
+          <div class="voice-label">Gunakan Ini</div>
+          <div class="voice-text">"Dapatkan ketenangan pikiran dengan memantau kesehatan bisnis Anda secara real-time, dari mana saja, kapan saja."</div>
+        </div>
+      </div>
+
+      <div class="voice-comparison">
+        <div class="voice-bad">
+          <div class="voice-label">Jangan Gunakan</div>
+          <div class="voice-text">"Transformasi digital sekarang atau bisnis Anda akan tertinggal dan bangkrut."</div>
+        </div>
+        <div class="voice-good">
+          <div class="voice-label">Gunakan Ini</div>
+          <div class="voice-text">"Ketika waktunya tepat, kami akan ada di sana untuk membantu Anda melangkah, dengan ritme yang nyaman untuk tim Anda."</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Color Palette Section -->
+<section id="colors" style="background: var(--beige);">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Visual Identity</div>
+      <h2 class="section-title">Palet Warna Kami</h2>
+      <p class="section-desc">Warna yang mencerminkan ketenangan, pertumbuhan, dan kehangatan.</p>
+    </div>
+
+    <div class="color-grid">
+      <div class="color-card">
+        <div class="color-preview" style="background: #1a2332;">#1A2332</div>
+        <div class="color-info">
+          <strong>Deep Slate</strong>
+          <span>Kepercayaan & fondasi kokoh</span>
+        </div>
+      </div>
+
+      <div class="color-card">
+        <div class="color-preview" style="background: #7BA891;">#7BA891</div>
+        <div class="color-info">
+          <strong>Sage Green</strong>
+          <span>Pertumbuhan & ketenangan</span>
+        </div>
+      </div>
+
+      <div class="color-card">
+        <div class="color-preview" style="background: #F5EFE6; color: #1a2332;">#F5EFE6</div>
+        <div class="color-info">
+          <strong>Warm Beige</strong>
+          <span>Kehangatan & kemanusiaan</span>
+        </div>
+      </div>
+
+      <div class="color-card">
+        <div class="color-preview" style="background: #FAF7F2; color: #1a2332;">#FAF7F2</div>
+        <div class="color-info">
+          <strong>Cream</strong>
+          <span>Ruang napas & kejelasan</span>
+        </div>
+      </div>
+
+      <div class="color-card">
+        <div class="color-preview" style="background: #C9A961;">#C9A961</div>
+        <div class="color-info">
+          <strong>Accent Gold</strong>
+          <span>Nilai & sentuhan premium</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-content">
+    <div class="footer-logo">Vantage<span>.</span></div>
+    <p class="footer-tagline">Teknologi yang mengabdi, bukan menguasai. Fondasi digital untuk kemajuan bersama.</p>
+    <div class="footer-bottom">
+      © 2026 Vantage Solutions. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Smooth scroll for navigation
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    });
+  });
+
+  // Simple scroll animation
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate-on-scroll');
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('.contrast-card, .pillar-card, .voice-comparison, .color-card').forEach(el => {
+    observer.observe(el);
+  });
+</script>
+
+</body>
+</html>
