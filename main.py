@@ -405,6 +405,63 @@ PRODUCTS = {
             'Soft carrying bag'
         ]
     },
+    'night-seeker-m3514': {
+        'name': 'NIGHT SEEKER M3514',
+        'category': 'Electro-Optics',
+        'image': 'NIGHTSEEKERM3514.jpg',
+        'gallery': ['NIGHTSEEKERM3514.jpg'],
+        'tagline': 'High-Performance Rugged Thermal Mini Observation System',
+        'description': (
+            'The NIGHT SEEKER M3514 is a small, lightweight thermal observation system for short to medium '
+            'ranges. It is suitable for monitoring open spaces around airports, oil installations, marine docks, '
+            'and other locations. The system combines an uncooled 8 to 12 micron detector with a 35mm F/1.4 '
+            'Germanium objective lens in a robust 6061T6 aluminium housing. It can also be temporarily mounted '
+            'on a vehicle with a miniature pan-and-tilt unit, allowing video to be viewed and the system operated '
+            'from inside the vehicle using a laptop.'
+        ),
+        'specs': {
+            'Mechanical Specifications': [
+                ('Overall Length', '115mm (not including lens cap)'),
+                ('Maximum Height', '79mm'),
+                ('Maximum Width', '97mm'),
+                ('Weight', '0.7kg'),
+                ('Construction', '6061T6 aluminium, hard black anodized with a matt black Teflon finish; other colours on request'),
+                ('Environment', 'MIL-SPEC'),
+                ('Operating Temperature', '-30°C to +60°C'),
+                ('Mount', '¼ UNC Helicoil thread or to client’s request')
+            ],
+            'Optical Specifications': [
+                ('Objective Lens', '35mm F/1.4 Germanium refractive'),
+                ('Field of View', '15.6° x 11.8°'),
+                ('Focus', 'Fixed at infinity'),
+                ('Range (Man-sized Target)', '664m'),
+                ('Recognition Range (Man-sized Target)', '221m')
+            ],
+            'Electrical Specifications': [
+                ('Detector', '25µm pitch microbolometer'),
+                ('Spectral Range', '8 to 12 microns'),
+                ('Number of Pixels', '384 x 288 / 320 x 240'),
+                ('Frame Rate', '50Hz (60Hz for 320 x 240 format)'),
+                ('Analog Video Output', 'CCIR or RS-170'),
+                ('Laptop External Controls', 'Digital zoom, NUC, video polarity'),
+                ('External Connection', '13-pin Amphenol'),
+                ('Video Connection', 'BNC connector'),
+                ('Power Supply', '12V lithium battery for stand-alone applications')
+            ]
+        },
+        'standard_supply': [
+            'High-impact carrying case',
+            'Operator’s manual',
+            'Objective lens cap'
+        ],
+        'extras': [
+            'Extended focal length objective lenses',
+            'Pan-and-tilt unit',
+            'LCD monitor package for vehicle installation',
+            '12V lithium battery pack',
+            'Soft carrying bag'
+        ]
+    },
     'night-seeker-m640': {
         'name': 'NIGHT SEEKER M-640',
         'category': 'Electro-Optics',
